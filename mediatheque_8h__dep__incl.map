@@ -1,0 +1,7 @@
+<map id="mediatheque.h" name="mediatheque.h">
+<area shape="rect" id="Node000001" title="Déclarations pour « Ma Petite Médiathèque » &#45; Partie 2 (fonctionnalités avancées)." alt="" coords="36,5,155,33"/>
+<area shape="rect" id="Node000002" href="$main_8c.html" title="Programme principal « Ma Petite Médiathèque » &#45; Partie 2 (menu complet)." alt="" coords="5,81,71,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,45,50,82,46,79,73,46"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8c.html" title="Définitions des fonctions pour « Ma Petite Médiathèque » &#45; Partie 2." alt="" coords="95,81,213,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,43,146,81,141,81,114,48"/>
+</map>

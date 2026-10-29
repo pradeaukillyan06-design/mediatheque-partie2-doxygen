@@ -1,0 +1,10 @@
+<map id="confirmer" name="confirmer">
+<area shape="rect" id="Node000001" title="Demande une réponse oui/non et renvoie 1 (oui) ou 0 (non)." alt="" coords="297,32,380,60"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b" title="Supprime un livre identifié par son identifiant, après confirmation." alt="" coords="108,5,249,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="279,37,249,34,250,28,285,36"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#aab22ba90ea580b8e73db98e3d7082cb7" title="Vide entièrement la médiathèque, après confirmation." alt="" coords="109,57,248,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="285,54,249,63,248,58,279,55"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,32,60,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,36,61,43,59,38,94,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="91,58,60,53,60,48,96,55"/>
+</map>

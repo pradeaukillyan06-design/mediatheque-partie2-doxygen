@@ -1,0 +1,7 @@
+<map id="lireTexteNonVide" name="lireTexteNonVide">
+<area shape="rect" id="Node000001" title="Lit une ligne de texte non vide, en redemandant tant que la saisie est vide." alt="" coords="5,5,138,33"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a8b37e72a483710e1d665d3aa0d78d3fe" title="Lit une ligne de texte saisie par l&#39;utilisateur, sans le &#39; &#39; final." alt="" coords="186,5,263,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,17,173,19,168,19,138,22"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8c.html#ad4f8173de065316f7d42497060a7792e" title="Vide le reste de la ligne dans le flux d&#39;entrée standard." alt="" coords="311,5,404,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,17,298,19,293,19,264,22"/>
+</map>

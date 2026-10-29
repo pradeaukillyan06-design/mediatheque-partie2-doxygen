@@ -1,0 +1,25 @@
+<map id="lireEntier" name="lireEntier">
+<area shape="rect" id="Node000001" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="474,133,555,161"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="111,5,246,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="494,120,465,85,446,68,425,54,381,36,334,25,288,20,247,18,245,13,289,14,335,20,383,31,428,49,450,63,469,81,499,121"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,159,60,186"/>
+<area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="466,127,396,104,305,82,255,76,205,76,156,83,109,98,88,110,70,126,44,160,40,157,66,123,85,106,107,93,155,78,205,71,256,71,306,77,398,99,471,127"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="118,107,239,134"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="457,145,239,128,239,123,461,141"/>
+<area shape="rect" id="Node000005" href="$mediatheque_8c.html#a9e30317ac3ef394c554a111f040addd1" title="Demande une réponse oui/non et renvoie 1 (oui) ou 0 (non)." alt="" coords="320,159,403,186"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="456,157,404,168,403,163,461,156"/>
+<area shape="rect" id="Node000008" href="$mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5" title="Modifie un livre identifié par son id (titre, auteur, catégorie ou tout)." alt="" coords="297,223,426,250"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="478,168,388,225,386,220,473,170"/>
+<area shape="rect" id="Node000009" href="$mediatheque_8c.html#ac4e5e42e5065c5ba1702ff7fb0fc8da3" title="Trie la collection selon un critère au choix (titre, auteur, catégorie ou identifiant)." alt="" coords="305,299,418,326"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="498,173,467,218,428,264,385,301,382,296,424,260,463,215,493,175"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,43,109,53,86,79,66,108,42,159,37,157,62,106,82,76,106,49,124,38"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="121,142,61,165,58,161,124,138"/>
+<area shape="rect" id="Node000006" href="$mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b" title="Supprime un livre identifié par son identifiant, après confirmation." alt="" coords="108,159,249,186"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="302,173,250,175,249,170,307,172"/>
+<area shape="rect" id="Node000007" href="$mediatheque_8c.html#aab22ba90ea580b8e73db98e3d7082cb7" title="Vide entièrement la médiathèque, après confirmation." alt="" coords="109,211,248,238"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="302,190,230,213,229,208,307,187"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="90,174,61,175,59,170,94,171"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="121,206,60,185,60,179,125,203"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="296,255,255,265,206,269,155,266,107,252,85,239,66,222,42,189,42,184,70,219,88,235,109,247,156,261,206,264,255,260,301,254"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="287,315,246,315,198,309,151,296,106,275,82,255,63,232,39,189,41,184,67,229,86,252,109,270,153,291,199,303,246,310,292,315"/>
+</map>

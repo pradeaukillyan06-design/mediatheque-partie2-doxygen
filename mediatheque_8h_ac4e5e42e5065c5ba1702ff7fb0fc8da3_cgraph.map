@@ -1,0 +1,9 @@
+<map id="trierCollection" name="trierCollection">
+<area shape="rect" id="Node000001" title="Trie la collection selon un critère au choix (titre, auteur, catégorie ou identifiant)." alt="" coords="5,32,119,60"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#ab32f61a22258e5fe476e07a8c624e608" title="VRAI si le livre j doit passer après le livre j + 1 pour le critère choisi (1 titre,..." alt="" coords="167,5,273,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,34,154,30,149,32,120,39"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="180,57,260,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,52,167,62,162,63,119,58"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#ad4f8173de065316f7d42497060a7792e" title="Vide le reste de la ligne dans le flux d&#39;entrée standard." alt="" coords="321,57,414,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="260,69,309,71,303,71,261,74"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="supprimerElement" name="supprimerElement">
+<area shape="rect" id="Node000001" title="Supprime un livre identifié par son identifiant, après confirmation." alt="" coords="5,57,147,85"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#ad2842a080b433e07fa4e2fde1002e045" title="Affiche un seul livre (identifiant, titre, auteur, catégorie, état)." alt="" coords="204,5,324,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,54,200,36,195,39,130,59"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8c.html#a9e30317ac3ef394c554a111f040addd1" title="Demande une réponse oui/non et renvoie 1 (oui) ou 0 (non)." alt="" coords="223,57,306,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,69,209,70,204,72,147,74"/>
+<area shape="rect" id="Node000006" href="$mediatheque_8c.html#aca2ae541fa6195f6ccd5fc793bef1322" title="Recherche l&#39;indice du livre dont l&#39;identifiant correspond à id." alt="" coords="195,109,334,137"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="129,83,200,104,195,106,129,88"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="382,57,462,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="306,69,369,71,364,72,307,74"/>
+<area shape="rect" id="Node000005" href="$mediatheque_8c.html#ad4f8173de065316f7d42497060a7792e" title="Vide le reste de la ligne dans le flux d&#39;entrée standard." alt="" coords="510,57,604,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="463,69,497,71,492,71,463,74"/>
+</map>

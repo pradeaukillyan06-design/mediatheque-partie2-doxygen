@@ -1,0 +1,11 @@
+<map id="emprunterLivre" name="emprunterLivre">
+<area shape="rect" id="Node000001" title="Marque un livre comme emprunté et note le nom de l&#39;emprunteur." alt="" coords="5,32,127,60"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a8af617ae4e77d69f080a8fd92043e16e" title="Lit une ligne de texte non vide, en redemandant tant que la saisie est vide." alt="" coords="178,5,310,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,34,165,31,160,32,128,39"/>
+<area shape="rect" id="Node000005" href="$mediatheque_8c.html#aca2ae541fa6195f6ccd5fc793bef1322" title="Recherche l&#39;indice du livre dont l&#39;identifiant correspond à id." alt="" coords="175,57,314,85"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="127,52,162,59,157,59,127,57"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8c.html#a8b37e72a483710e1d665d3aa0d78d3fe" title="Lit une ligne de texte saisie par l&#39;utilisateur, sans le &#39; &#39; final." alt="" coords="362,5,439,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="311,17,349,19,344,19,311,22"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#ad4f8173de065316f7d42497060a7792e" title="Vide le reste de la ligne dans le flux d&#39;entrée standard." alt="" coords="487,5,581,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="440,17,475,19,469,19,440,22"/>
+</map>

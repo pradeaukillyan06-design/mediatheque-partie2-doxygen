@@ -1,0 +1,16 @@
+<map id="lireTexteNonVide" name="lireTexteNonVide">
+<area shape="rect" id="Node000001" title="Lit une ligne de texte non vide, en redemandant tant que la saisie est vide." alt="" coords="291,84,423,112"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="108,5,243,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,78,242,48,214,36,214,31,244,43,315,77"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="115,57,236,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="273,86,236,83,236,77,278,85"/>
+<area shape="rect" id="Node000005" href="$mediatheque_8c.html#a15715ae575b16aed43d9ad0751649172" title="Marque un livre comme emprunté et note le nom de l&#39;emprunteur." alt="" coords="115,109,236,137"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="273,110,237,117,236,112,278,109"/>
+<area shape="rect" id="Node000006" href="$mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5" title="Modifie un livre identifié par son id (titre, auteur, catégorie ou tout)." alt="" coords="111,161,240,189"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="314,118,244,151,214,163,212,158,242,146,309,119"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,84,60,112"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,42,109,48,54,85,50,81,106,44,122,38"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="98,87,61,95,59,90,101,83"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="97,111,60,105,60,100,102,108"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="118,155,106,151,51,114,53,109,109,146,123,155"/>
+</map>

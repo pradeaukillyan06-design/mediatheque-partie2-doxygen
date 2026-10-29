@@ -1,0 +1,66 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,393,60,421"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="117,367,252,394"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,400,103,393,100,397,62,405"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="538,368,619,396"/>
+<area shape="poly" id="edge20_Node000001_Node000004" title=" " alt="" coords="33,392,41,337,56,262,78,190,91,163,106,145,131,138,174,136,292,140,407,149,463,158,488,178,509,201,541,254,562,308,574,354,569,352,557,310,536,256,505,204,484,182,461,163,406,155,292,145,174,141,131,144,109,149,95,166,83,192,62,263,47,338,38,393"/>
+<area shape="rect" id="Node000007" href="$mediatheque_8c.html#a8b37e72a483710e1d665d3aa0d78d3fe" title="Lit une ligne de texte saisie par l&#39;utilisateur, sans le &#39; &#39; final." alt="" coords="540,627,617,654"/>
+<area shape="poly" id="edge21_Node000001_Node000007" title=" " alt="" coords="35,419,44,486,58,576,79,663,93,695,109,716,127,719,166,721,281,721,397,716,462,710,508,689,546,665,552,663,511,693,463,715,398,721,281,726,166,726,126,724,106,720,89,698,74,664,53,577,39,487,35,424"/>
+<area shape="rect" id="Node000008" href="$main_8c.html#a9491d6a1757a094d3aa2c1258707205d" title="Affiche le menu principal à l&#39;écran." alt="" coords="131,211,238,238"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="34,392,42,363,56,324,77,284,106,249,118,242,116,246,110,253,81,287,61,327,47,364,39,393"/>
+<area shape="rect" id="Node000009" href="$mediatheque_8c.html#a0fe71866ad3bad445197fe7e56613cb5" title="Affiche les statistiques de la médiathèque : total, disponibles, empruntés, Top 3 des livres les plus..." alt="" coords="111,57,258,85"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="30,393,31,340,39,263,48,221,61,178,80,138,106,101,120,91,117,96,110,105,85,141,66,180,53,222,44,264,36,341,36,393"/>
+<area shape="rect" id="Node000013" href="$mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="124,679,245,706"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="34,418,38,467,48,532,57,567,70,602,87,635,110,664,114,670,109,670,106,668,83,638,65,604,52,569,43,533,33,467,33,424"/>
+<area shape="rect" id="Node000015" href="$mediatheque_8c.html#a15715ae575b16aed43d9ad0751649172" title="Marque un livre comme emprunté et note le nom de l&#39;emprunteur." alt="" coords="124,627,245,654"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="35,419,42,459,54,510,76,564,91,590,110,612,115,618,109,618,106,616,87,593,71,567,49,511,37,460,35,424"/>
+<area shape="rect" id="Node000016" href="$mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5" title="Modifie un livre identifié par son id (titre, auteur, catégorie ou tout)." alt="" coords="120,419,249,446"/>
+<area shape="poly" id="edge22_Node000001_Node000016" title=" " alt="" coords="59,409,107,417,102,421,61,414"/>
+<area shape="rect" id="Node000017" href="$mediatheque_8c.html#ac000fbe963e93aede1ae6d41706c527d" title="Recherche un livre par son auteur (comparaison exacte)." alt="" coords="108,471,261,498"/>
+<area shape="poly" id="edge27_Node000001_Node000017" title=" " alt="" coords="51,419,109,455,125,463,120,466,106,460,52,424"/>
+<area shape="rect" id="Node000018" href="$mediatheque_8c.html#a514a3ea54060df445fc9046eef281eff" title="Recherche un livre par son titre (comparaison exacte)." alt="" coords="114,523,254,550"/>
+<area shape="poly" id="edge28_Node000001_Node000018" title=" " alt="" coords="40,419,68,463,87,487,109,508,119,515,114,516,106,512,83,491,64,466,41,424"/>
+<area shape="rect" id="Node000019" href="$mediatheque_8c.html#a459c71c4477b883e6b2233e44604fdf6" title="Marque un livre comme rendu (disponible) et efface l&#39;emprunteur." alt="" coords="137,575,232,602"/>
+<area shape="poly" id="edge29_Node000001_Node000019" title=" " alt="" coords="37,419,47,450,61,487,81,526,109,560,125,571,120,573,106,564,77,529,56,489,42,451,37,424"/>
+<area shape="rect" id="Node000020" href="$mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b" title="Supprime un livre identifié par son identifiant, après confirmation." alt="" coords="114,315,255,342"/>
+<area shape="poly" id="edge31_Node000001_Node000020" title=" " alt="" coords="49,391,106,353,124,346,120,351,109,357,53,395"/>
+<area shape="rect" id="Node000022" href="$mediatheque_8c.html#ac4e5e42e5065c5ba1702ff7fb0fc8da3" title="Trie la collection selon un critère au choix (titre, auteur, catégorie ou identifiant)." alt="" coords="128,159,241,186"/>
+<area shape="poly" id="edge36_Node000001_Node000022" title=" " alt="" coords="32,393,37,354,49,302,71,247,86,220,106,197,116,191,113,196,110,201,91,224,76,249,54,304,42,355,37,393"/>
+<area shape="rect" id="Node000024" href="$mediatheque_8c.html#aab22ba90ea580b8e73db98e3d7082cb7" title="Vide entièrement la médiathèque, après confirmation." alt="" coords="115,263,254,290"/>
+<area shape="poly" id="edge39_Node000001_Node000024" title=" " alt="" coords="38,392,64,347,83,323,106,301,117,295,114,300,109,305,87,326,68,350,43,394"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8c.html#ad2842a080b433e07fa4e2fde1002e045" title="Affiche un seul livre (identifiant, titre, auteur, catégorie, état)." alt="" coords="326,317,446,345"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="242,364,314,347,310,351,245,368"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="252,378,525,380,521,384,253,383"/>
+<area shape="rect" id="Node000006" href="$mediatheque_8c.html#a8af617ae4e77d69f080a8fd92043e16e" title="Lit une ligne de texte non vide, en redemandant tant que la saisie est vide." alt="" coords="320,627,452,654"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="245,392,263,405,281,432,289,459,290,485,288,511,285,536,286,561,294,587,311,612,315,618,310,617,307,616,289,589,281,562,280,536,282,510,285,485,284,460,276,434,259,409,245,398"/>
+<area shape="rect" id="Node000005" href="$mediatheque_8c.html#ad4f8173de065316f7d42497060a7792e" title="Vide le reste de la ligne dans le flux d&#39;entrée standard." alt="" coords="695,497,788,525"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="598,394,713,487,708,487,597,399"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="452,638,527,640,522,641,453,643"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="596,624,708,536,713,534,599,628"/>
+<area shape="rect" id="Node000010" href="$mediatheque_8c.html#a7e1cc2023265ee77c844c9c8b960d831" title="Affiche le nombre de livres de chaque catégorie, une seule fois par catégorie." alt="" coords="309,5,462,33"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="239,55,316,36,312,39,243,59"/>
+<area shape="rect" id="Node000012" href="$mediatheque_8c.html#a526b15984d60b5b4242aecf03d4aea0d" title="Affiche jusqu&#39;à 3 livres empruntés au moins une fois, du plus emprunté au moins emprunté." alt="" coords="336,57,436,85"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="257,69,322,70,318,73,260,73"/>
+<area shape="rect" id="Node000011" href="$mediatheque_8c.html#a9181cda1b4489345fbf3332d74befdb4" title="VRAI si un livre placé avant la case i a la même catégorie." alt="" coords="510,5,647,33"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="462,17,497,18,492,20,464,22"/>
+<area shape="poly" id="edge14_Node000013_Node000004" title=" " alt="" coords="245,701,296,705,353,702,410,690,436,679,461,664,489,638,512,607,531,572,545,537,564,467,573,413,577,409,569,468,550,538,535,575,516,610,493,641,464,668,439,684,411,695,354,708,296,710,245,706"/>
+<area shape="poly" id="edge15_Node000013_Node000006" title=" " alt="" coords="240,675,312,659,317,658,242,681"/>
+<area shape="rect" id="Node000014" href="$mediatheque_8c.html#aca2ae541fa6195f6ccd5fc793bef1322" title="Recherche l&#39;indice du livre dont l&#39;identifiant correspond à id." alt="" coords="316,575,455,602"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="236,676,260,664,274,651,283,639,292,626,307,613,317,610,322,608,311,617,296,630,287,642,278,655,262,668,238,681"/>
+<area shape="poly" id="edge18_Node000015_Node000006" title=" " alt="" coords="245,638,306,640,301,641,246,643"/>
+<area shape="poly" id="edge19_Node000015_Node000014" title=" " alt="" coords="240,623,317,606,312,608,242,629"/>
+<area shape="poly" id="edge23_Node000016_Node000003" title=" " alt="" coords="230,416,260,403,307,378,353,352,349,356,310,383,262,408,233,420"/>
+<area shape="poly" id="edge24_Node000016_Node000004" title=" " alt="" coords="249,422,525,387,521,391,250,427"/>
+<area shape="poly" id="edge25_Node000016_Node000006" title=" " alt="" coords="244,444,263,457,278,477,285,497,288,536,290,575,297,593,311,612,316,618,311,617,307,616,292,596,285,576,282,537,280,498,273,480,259,461,245,450"/>
+<area shape="poly" id="edge26_Node000016_Node000014" title=" " alt="" coords="236,444,262,457,294,481,323,509,368,563,363,562,319,512,291,485,260,461,237,449"/>
+<area shape="poly" id="edge30_Node000019_Node000014" title=" " alt="" coords="232,586,303,588,298,589,233,591"/>
+<area shape="poly" id="edge32_Node000020_Node000003" title=" " alt="" coords="254,327,313,329,308,332,256,332"/>
+<area shape="poly" id="edge35_Node000020_Node000014" title=" " alt="" coords="241,340,263,353,286,376,307,402,340,459,364,514,379,560,374,559,359,516,335,461,302,405,282,380,259,357,242,346"/>
+<area shape="rect" id="Node000021" href="$mediatheque_8c.html#a9e30317ac3ef394c554a111f040addd1" title="Demande une réponse oui/non et renvoie 1 (oui) ou 0 (non)." alt="" coords="344,265,427,293"/>
+<area shape="poly" id="edge33_Node000020_Node000021" title=" " alt="" coords="242,312,331,291,327,295,245,316"/>
+<area shape="poly" id="edge34_Node000021_Node000004" title=" " alt="" coords="427,289,464,303,509,329,549,358,544,359,506,334,461,308,428,294"/>
+<area shape="poly" id="edge38_Node000022_Node000004" title=" " alt="" coords="240,162,292,158,349,160,409,172,437,182,464,196,485,211,503,230,534,272,556,315,571,354,566,353,552,318,530,275,499,233,481,215,461,200,435,187,407,177,349,166,292,163,243,166"/>
+<area shape="rect" id="Node000023" href="$mediatheque_8c.html#ab32f61a22258e5fe476e07a8c624e608" title="VRAI si le livre j doit passer après le livre j + 1 pour le critère choisi (1 titre,..." alt="" coords="332,209,439,237"/>
+<area shape="poly" id="edge37_Node000022_Node000023" title=" " alt="" coords="241,184,319,205,315,207,242,189"/>
+<area shape="poly" id="edge40_Node000024_Node000021" title=" " alt="" coords="254,275,331,277,326,280,256,280"/>
+</map>

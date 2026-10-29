@@ -1,0 +1,13 @@
+<map id="afficherUnLivre" name="afficherUnLivre">
+<area shape="rect" id="Node000001" title="Affiche un seul livre (identifiant, titre, auteur, catégorie, état)." alt="" coords="297,57,417,85"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="111,5,246,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,53,228,36,229,31,295,52"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5" title="Modifie un livre identifié par son id (titre, auteur, catégorie ou tout)." alt="" coords="114,57,243,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="279,72,243,74,243,69,284,71"/>
+<area shape="rect" id="Node000005" href="$mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b" title="Supprime un livre identifié par son identifiant, après confirmation." alt="" coords="108,109,249,137"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="295,89,229,111,228,106,290,90"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,57,60,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,41,61,64,59,59,124,37"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="96,73,61,74,59,69,100,70"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="121,105,60,83,60,78,125,102"/>
+</map>

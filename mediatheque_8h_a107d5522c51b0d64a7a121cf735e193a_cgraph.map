@@ -1,0 +1,5 @@
+<map id="lireEntier" name="lireEntier">
+<area shape="rect" id="Node000001" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="5,5,86,33"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#ad4f8173de065316f7d42497060a7792e" title="Vide le reste de la ligne dans le flux d&#39;entrée standard." alt="" coords="134,5,227,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,17,121,19,115,20,86,22"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="main.c" name="main.c">
+<area shape="rect" id="Node000001" title="Programme principal « Ma Petite Médiathèque » &#45; Partie 2 (menu complet)." alt="" coords="63,5,128,33"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,81,71,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,32,59,71,55,67,83,35"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8h.html" title="Déclarations pour « Ma Petite Médiathèque » &#45; Partie 2 (fonctionnalités avancées)." alt="" coords="94,81,214,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,31,137,69,131,69,105,36"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="lireLigne" name="lireLigne">
+<area shape="rect" id="Node000001" title="Lit une ligne de texte saisie par l&#39;utilisateur, sans le &#39; &#39; final." alt="" coords="5,5,83,33"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#ad4f8173de065316f7d42497060a7792e" title="Vide le reste de la ligne dans le flux d&#39;entrée standard." alt="" coords="131,5,224,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,17,118,19,113,20,83,22"/>
+</map>

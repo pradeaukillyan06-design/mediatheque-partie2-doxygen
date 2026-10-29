@@ -1,0 +1,5 @@
+<map id="rendreLivre" name="rendreLivre">
+<area shape="rect" id="Node000001" title="Marque un livre comme rendu (disponible) et efface l&#39;emprunteur." alt="" coords="5,5,101,33"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#aca2ae541fa6195f6ccd5fc793bef1322" title="Recherche l&#39;indice du livre dont l&#39;identifiant correspond à id." alt="" coords="149,5,288,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,17,136,19,131,19,101,22"/>
+</map>

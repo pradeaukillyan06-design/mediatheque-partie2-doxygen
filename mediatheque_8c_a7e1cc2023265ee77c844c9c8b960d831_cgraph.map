@@ -1,0 +1,5 @@
+<map id="afficherParCategorie" name="afficherParCategorie">
+<area shape="rect" id="Node000001" title="Affiche le nombre de livres de chaque catégorie, une seule fois par catégorie." alt="" coords="5,5,159,33"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a9181cda1b4489345fbf3332d74befdb4" title="VRAI si un livre placé avant la case i a la même catégorie." alt="" coords="207,5,343,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,17,193,19,188,19,159,22"/>
+</map>

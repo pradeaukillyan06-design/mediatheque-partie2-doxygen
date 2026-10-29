@@ -1,0 +1,9 @@
+<map id="viderMediatheque" name="viderMediatheque">
+<area shape="rect" id="Node000001" title="Vide entièrement la médiathèque, après confirmation." alt="" coords="5,5,145,33"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a9e30317ac3ef394c554a111f040addd1" title="Demande une réponse oui/non et renvoie 1 (oui) ou 0 (non)." alt="" coords="193,5,276,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,17,180,19,174,19,145,22"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="324,5,404,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,17,311,19,306,19,277,22"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#ad4f8173de065316f7d42497060a7792e" title="Vide le reste de la ligne dans le flux d&#39;entrée standard." alt="" coords="452,5,546,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="405,17,439,19,434,19,405,22"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="ajouterElement" name="ajouterElement">
+<area shape="rect" id="Node000001" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="5,56,127,84"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="362,5,442,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,53,174,42,265,29,349,23,344,24,266,34,175,47,124,58"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#a8af617ae4e77d69f080a8fd92043e16e" title="Lit une ligne de texte non vide, en redemandant tant que la saisie est vide." alt="" coords="178,56,310,84"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="127,67,165,69,160,71,128,72"/>
+<area shape="rect" id="Node000006" href="$mediatheque_8c.html#aca2ae541fa6195f6ccd5fc793bef1322" title="Recherche l&#39;indice du livre dont l&#39;identifiant correspond à id." alt="" coords="175,108,314,136"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="117,82,183,102,178,104,116,87"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8c.html#ad4f8173de065316f7d42497060a7792e" title="Vide le reste de la ligne dans le flux d&#39;entrée standard." alt="" coords="490,32,584,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="443,24,478,34,472,34,443,30"/>
+<area shape="rect" id="Node000005" href="$mediatheque_8c.html#a8b37e72a483710e1d665d3aa0d78d3fe" title="Lit une ligne de texte saisie par l&#39;utilisateur, sans le &#39; &#39; final." alt="" coords="364,57,441,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="311,68,351,70,345,71,311,73"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="441,61,472,58,478,57,442,67"/>
+</map>

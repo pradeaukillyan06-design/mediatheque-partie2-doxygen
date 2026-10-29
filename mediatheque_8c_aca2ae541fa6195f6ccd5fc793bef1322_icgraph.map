@@ -1,0 +1,19 @@
+<map id="trouverIndiceParId" name="trouverIndiceParId">
+<area shape="rect" id="Node000001" title="Recherche l&#39;indice du livre dont l&#39;identifiant correspond à id." alt="" coords="297,109,436,137"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="118,5,239,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="332,100,293,75,248,48,222,36,222,31,250,43,296,70,337,100"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#a15715ae575b16aed43d9ad0751649172" title="Marque un livre comme emprunté et note le nom de l&#39;emprunteur." alt="" coords="118,57,239,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="297,105,231,88,231,83,302,104"/>
+<area shape="rect" id="Node000005" href="$mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5" title="Modifie un livre identifié par son id (titre, auteur, catégorie ou tout)." alt="" coords="114,109,243,137"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="279,124,244,126,243,121,284,122"/>
+<area shape="rect" id="Node000006" href="$mediatheque_8c.html#a459c71c4477b883e6b2233e44604fdf6" title="Marque un livre comme rendu (disponible) et efface l&#39;emprunteur." alt="" coords="131,161,226,189"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="297,143,227,165,226,159,302,141"/>
+<area shape="rect" id="Node000007" href="$mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b" title="Supprime un livre identifié par son identifiant, après confirmation." alt="" coords="108,213,249,241"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="337,145,296,176,250,203,223,215,221,210,248,198,293,171,332,147"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,109,60,137"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,42,109,48,73,79,47,110,42,107,69,76,106,44,119,38"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="121,93,61,116,59,111,124,89"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="96,125,61,126,59,121,100,121"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="121,157,60,135,60,130,125,154"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="114,206,106,203,69,171,44,140,45,135,73,167,109,198,120,206"/>
+</map>

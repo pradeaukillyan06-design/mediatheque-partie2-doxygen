@@ -1,0 +1,9 @@
+<map id="afficherStatistiques" name="afficherStatistiques">
+<area shape="rect" id="Node000001" title="Affiche les statistiques de la médiathèque : total, disponibles, empruntés, Top 3 des livres les plus..." alt="" coords="5,32,153,60"/>
+<area shape="rect" id="Node000002" href="$mediatheque_8c.html#a7e1cc2023265ee77c844c9c8b960d831" title="Affiche le nombre de livres de chaque catégorie, une seule fois par catégorie." alt="" coords="201,5,354,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,33,188,31,183,32,154,39"/>
+<area shape="rect" id="Node000004" href="$mediatheque_8c.html#a526b15984d60b5b4242aecf03d4aea0d" title="Affiche jusqu&#39;à 3 livres empruntés au moins une fois, du plus emprunté au moins emprunté." alt="" coords="227,57,328,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,53,214,62,209,63,153,58"/>
+<area shape="rect" id="Node000003" href="$mediatheque_8c.html#a9181cda1b4489345fbf3332d74befdb4" title="VRAI si un livre placé avant la case i a la même catégorie." alt="" coords="402,5,538,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,17,389,19,383,19,355,22"/>
+</map>
