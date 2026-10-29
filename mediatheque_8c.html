@@ -293,7 +293,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_a1dd3ea3e8938a3484aa2f7c3c7bb71ae_icgraph.png" border="0" usemap="#amediatheque_8c_a1dd3ea3e8938a3484aa2f7c3c7bb71ae_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_a1dd3ea3e8938a3484aa2f7c3c7bb71ae_icgraph" id="amediatheque_8c_a1dd3ea3e8938a3484aa2f7c3c7bb71ae_icgraph">
 <area shape="rect" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="108,5,243,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -328,29 +328,36 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Affiche le nombre de livres de chaque catégorie, une seule fois par catégorie. </p>
-<p>Fonction interne (static) reprise de afficherParCategorie (pseudo-code). </p>
+<p>Fonction interne (static) reprise de afficherParCategorie (pseudo-code).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tab</td><td>Tableau des livres. </td></tr>
+    <tr><td class="paramname">taille</td><td>Nombre de livres actuellement enregistrés. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00746">746</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  747</span>{</div>
-<div class="line"><span class="lineno">  748</span>    printf(<span class="stringliteral">&quot;Livres par categorie :\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  749</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; taille; i++)</div>
-<div class="line"><span class="lineno">  750</span>    {</div>
-<div class="line"><span class="lineno">  751</span>        <span class="comment">/* On n&#39;affiche une categorie qu&#39;a sa premiere apparition. */</span></div>
-<div class="line"><span class="lineno">  752</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a9181cda1b4489345fbf3332d74befdb4">categorieDejaVue</a>(tab, i))</div>
-<div class="line"><span class="lineno">  753</span>        {</div>
-<div class="line"><span class="lineno">  754</span>            <span class="keywordtype">int</span> compte = 0;</div>
-<div class="line"><span class="lineno">  755</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; taille; k++)</div>
-<div class="line"><span class="lineno">  756</span>            {</div>
-<div class="line"><span class="lineno">  757</span>                <span class="keywordflow">if</span> (strcmp(tab[k].categorie, tab[i].categorie) == 0)</div>
-<div class="line"><span class="lineno">  758</span>                {</div>
-<div class="line"><span class="lineno">  759</span>                    compte++;</div>
-<div class="line"><span class="lineno">  760</span>                }</div>
-<div class="line"><span class="lineno">  761</span>            }</div>
-<div class="line"><span class="lineno">  762</span>            printf(<span class="stringliteral">&quot;  %s : %d livre(s)\n&quot;</span>, tab[i].categorie, compte);</div>
-<div class="line"><span class="lineno">  763</span>        }</div>
-<div class="line"><span class="lineno">  764</span>    }</div>
-<div class="line"><span class="lineno">  765</span>}</div>
-<div class="ttc" id="amediatheque_8c_html_a9181cda1b4489345fbf3332d74befdb4"><div class="ttname"><a href="#a9181cda1b4489345fbf3332d74befdb4">categorieDejaVue</a></div><div class="ttdeci">static int categorieDejaVue(Livre tab[], int i)</div><div class="ttdoc">VRAI si un livre placé avant la case i a la même catégorie.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00728">mediatheque.c:728</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00761">761</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  762</span>{</div>
+<div class="line"><span class="lineno">  763</span>    printf(<span class="stringliteral">&quot;Livres par categorie :\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  764</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; taille; i++)</div>
+<div class="line"><span class="lineno">  765</span>    {</div>
+<div class="line"><span class="lineno">  766</span>        <span class="comment">/* On n&#39;affiche une categorie qu&#39;a sa premiere apparition. */</span></div>
+<div class="line"><span class="lineno">  767</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a9181cda1b4489345fbf3332d74befdb4">categorieDejaVue</a>(tab, i))</div>
+<div class="line"><span class="lineno">  768</span>        {</div>
+<div class="line"><span class="lineno">  769</span>            <span class="keywordtype">int</span> compte = 0;</div>
+<div class="line"><span class="lineno">  770</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; taille; k++)</div>
+<div class="line"><span class="lineno">  771</span>            {</div>
+<div class="line"><span class="lineno">  772</span>                <span class="keywordflow">if</span> (strcmp(tab[k].categorie, tab[i].categorie) == 0)</div>
+<div class="line"><span class="lineno">  773</span>                {</div>
+<div class="line"><span class="lineno">  774</span>                    compte++;</div>
+<div class="line"><span class="lineno">  775</span>                }</div>
+<div class="line"><span class="lineno">  776</span>            }</div>
+<div class="line"><span class="lineno">  777</span>            printf(<span class="stringliteral">&quot;  %s : %d livre(s)\n&quot;</span>, tab[i].categorie, compte);</div>
+<div class="line"><span class="lineno">  778</span>        }</div>
+<div class="line"><span class="lineno">  779</span>    }</div>
+<div class="line"><span class="lineno">  780</span>}</div>
+<div class="ttc" id="amediatheque_8c_html_a9181cda1b4489345fbf3332d74befdb4"><div class="ttname"><a href="#a9181cda1b4489345fbf3332d74befdb4">categorieDejaVue</a></div><div class="ttdeci">static int categorieDejaVue(Livre tab[], int i)</div><div class="ttdoc">VRAI si un livre placé avant la case i a la même catégorie.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00740">mediatheque.c:740</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -369,7 +376,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Affiche le nombre de livres de chaque catégorie, une seule fois par catégorie." alt="" coords="303,5,456,33"/>
 <area shape="rect" href="mediatheque_8c.html#a0fe71866ad3bad445197fe7e56613cb5" title="Affiche les statistiques de la médiathèque : total, disponibles, empruntés, Top 3 des livres les plus..." alt="" coords="108,5,255,33"/>
 <area shape="poly" title=" " alt="" coords="285,19,256,22,255,17,290,19"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="90,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -404,34 +411,34 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00774">774</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  775</span>{</div>
-<div class="line"><span class="lineno">  776</span>    <span class="keywordflow">if</span> (taille == 0)</div>
-<div class="line"><span class="lineno">  777</span>    {</div>
-<div class="line"><span class="lineno">  778</span>        printf(<span class="stringliteral">&quot;Aucun livre enregistre.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  779</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  780</span>    }</div>
-<div class="line"><span class="lineno">  781</span> </div>
-<div class="line"><span class="lineno">  782</span>    <span class="keywordtype">int</span> nbEmpruntes = 0;</div>
-<div class="line"><span class="lineno">  783</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; taille; i++)</div>
-<div class="line"><span class="lineno">  784</span>    {</div>
-<div class="line"><span class="lineno">  785</span>        <span class="keywordflow">if</span> (tab[i].disponible == 0)</div>
-<div class="line"><span class="lineno">  786</span>        {</div>
-<div class="line"><span class="lineno">  787</span>            nbEmpruntes++;</div>
-<div class="line"><span class="lineno">  788</span>        }</div>
-<div class="line"><span class="lineno">  789</span>    }</div>
-<div class="line"><span class="lineno">  790</span>    <span class="keywordtype">int</span> nbDisponibles = taille - nbEmpruntes;</div>
-<div class="line"><span class="lineno">  791</span> </div>
-<div class="line"><span class="lineno">  792</span>    printf(<span class="stringliteral">&quot;Nombre total de livres : %d\n&quot;</span>, taille);</div>
-<div class="line"><span class="lineno">  793</span>    printf(<span class="stringliteral">&quot;Livres disponibles : %d\n&quot;</span>, nbDisponibles);</div>
-<div class="line"><span class="lineno">  794</span>    printf(<span class="stringliteral">&quot;Livres empruntes : %d\n&quot;</span>, nbEmpruntes);</div>
-<div class="line"><span class="lineno">  795</span> </div>
-<div class="line"><span class="lineno">  796</span>    <span class="comment">/* Fonctionnalites supplementaires reprises du pseudo-code. */</span></div>
-<div class="line"><span class="lineno">  797</span>    <a class="code hl_function" href="#a526b15984d60b5b4242aecf03d4aea0d">afficherTop3</a>(tab, taille);</div>
-<div class="line"><span class="lineno">  798</span>    <a class="code hl_function" href="#a7e1cc2023265ee77c844c9c8b960d831">afficherParCategorie</a>(tab, taille);</div>
-<div class="line"><span class="lineno">  799</span>}</div>
-<div class="ttc" id="amediatheque_8c_html_a526b15984d60b5b4242aecf03d4aea0d"><div class="ttname"><a href="#a526b15984d60b5b4242aecf03d4aea0d">afficherTop3</a></div><div class="ttdeci">static void afficherTop3(Livre tab[], int taille)</div><div class="ttdoc">Affiche jusqu&#39;à 3 livres empruntés au moins une fois, du plus emprunté au moins emprunté.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00686">mediatheque.c:686</a></div></div>
-<div class="ttc" id="amediatheque_8c_html_a7e1cc2023265ee77c844c9c8b960d831"><div class="ttname"><a href="#a7e1cc2023265ee77c844c9c8b960d831">afficherParCategorie</a></div><div class="ttdeci">static void afficherParCategorie(Livre tab[], int taille)</div><div class="ttdoc">Affiche le nombre de livres de chaque catégorie, une seule fois par catégorie.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00746">mediatheque.c:746</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00789">789</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  790</span>{</div>
+<div class="line"><span class="lineno">  791</span>    <span class="keywordflow">if</span> (taille == 0)</div>
+<div class="line"><span class="lineno">  792</span>    {</div>
+<div class="line"><span class="lineno">  793</span>        printf(<span class="stringliteral">&quot;Aucun livre enregistre.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  794</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  795</span>    }</div>
+<div class="line"><span class="lineno">  796</span> </div>
+<div class="line"><span class="lineno">  797</span>    <span class="keywordtype">int</span> nbEmpruntes = 0;</div>
+<div class="line"><span class="lineno">  798</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; taille; i++)</div>
+<div class="line"><span class="lineno">  799</span>    {</div>
+<div class="line"><span class="lineno">  800</span>        <span class="keywordflow">if</span> (tab[i].disponible == 0)</div>
+<div class="line"><span class="lineno">  801</span>        {</div>
+<div class="line"><span class="lineno">  802</span>            nbEmpruntes++;</div>
+<div class="line"><span class="lineno">  803</span>        }</div>
+<div class="line"><span class="lineno">  804</span>    }</div>
+<div class="line"><span class="lineno">  805</span>    <span class="keywordtype">int</span> nbDisponibles = taille - nbEmpruntes;</div>
+<div class="line"><span class="lineno">  806</span> </div>
+<div class="line"><span class="lineno">  807</span>    printf(<span class="stringliteral">&quot;Nombre total de livres : %d\n&quot;</span>, taille);</div>
+<div class="line"><span class="lineno">  808</span>    printf(<span class="stringliteral">&quot;Livres disponibles : %d\n&quot;</span>, nbDisponibles);</div>
+<div class="line"><span class="lineno">  809</span>    printf(<span class="stringliteral">&quot;Livres empruntes : %d\n&quot;</span>, nbEmpruntes);</div>
+<div class="line"><span class="lineno">  810</span> </div>
+<div class="line"><span class="lineno">  811</span>    <span class="comment">/* Fonctionnalites supplementaires reprises du pseudo-code. */</span></div>
+<div class="line"><span class="lineno">  812</span>    <a class="code hl_function" href="#a526b15984d60b5b4242aecf03d4aea0d">afficherTop3</a>(tab, taille);</div>
+<div class="line"><span class="lineno">  813</span>    <a class="code hl_function" href="#a7e1cc2023265ee77c844c9c8b960d831">afficherParCategorie</a>(tab, taille);</div>
+<div class="line"><span class="lineno">  814</span>}</div>
+<div class="ttc" id="amediatheque_8c_html_a526b15984d60b5b4242aecf03d4aea0d"><div class="ttname"><a href="#a526b15984d60b5b4242aecf03d4aea0d">afficherTop3</a></div><div class="ttdeci">static void afficherTop3(Livre tab[], int taille)</div><div class="ttdoc">Affiche jusqu&#39;à 3 livres empruntés au moins une fois, du plus emprunté au moins emprunté.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00694">mediatheque.c:694</a></div></div>
+<div class="ttc" id="amediatheque_8c_html_a7e1cc2023265ee77c844c9c8b960d831"><div class="ttname"><a href="#a7e1cc2023265ee77c844c9c8b960d831">afficherParCategorie</a></div><div class="ttdeci">static void afficherParCategorie(Livre tab[], int taille)</div><div class="ttdoc">Affiche le nombre de livres de chaque catégorie, une seule fois par catégorie.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00761">mediatheque.c:761</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -452,7 +459,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_a0fe71866ad3bad445197fe7e56613cb5_icgraph.png" border="0" usemap="#amediatheque_8c_a0fe71866ad3bad445197fe7e56613cb5_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_a0fe71866ad3bad445197fe7e56613cb5_icgraph" id="amediatheque_8c_a0fe71866ad3bad445197fe7e56613cb5_icgraph">
 <area shape="rect" title="Affiche les statistiques de la médiathèque : total, disponibles, empruntés, Top 3 des livres les plus..." alt="" coords="108,5,255,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="90,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -487,44 +494,51 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Affiche jusqu'à 3 livres empruntés au moins une fois, du plus emprunté au moins emprunté. </p>
-<p>Fonction interne (static) reprise de afficherTop3 (pseudo-code). Ne modifie pas le tableau (pas de tri) : recherche à chaque rang le livre le plus emprunté parmi ceux pas encore classés. </p>
+<p>Fonction interne (static) reprise de afficherTop3 (pseudo-code). Ne modifie pas le tableau (pas de tri) : recherche à chaque rang le livre le plus emprunté parmi ceux pas encore classés.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tab</td><td>Tableau des livres. </td></tr>
+    <tr><td class="paramname">taille</td><td>Nombre de livres actuellement enregistrés. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00686">686</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  687</span>{</div>
-<div class="line"><span class="lineno">  688</span>    <span class="keywordtype">int</span> dejaClasse[<a class="code hl_define" href="mediatheque_8h.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">TAILLE_MAX</a>] = { 0 };</div>
-<div class="line"><span class="lineno">  689</span> </div>
-<div class="line"><span class="lineno">  690</span>    printf(<span class="stringliteral">&quot;Top 3 des livres les plus empruntes :\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  691</span>    <span class="keywordtype">int</span> rang = 1;</div>
-<div class="line"><span class="lineno">  692</span>    <span class="keywordtype">int</span> fini = 0;</div>
-<div class="line"><span class="lineno">  693</span>    <span class="keywordflow">while</span> (rang &lt;= 3 &amp;&amp; !fini)</div>
-<div class="line"><span class="lineno">  694</span>    {</div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordtype">int</span> iMax = -1;</div>
-<div class="line"><span class="lineno">  696</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; taille; i++)</div>
-<div class="line"><span class="lineno">  697</span>        {</div>
-<div class="line"><span class="lineno">  698</span>            <span class="keywordflow">if</span> (!dejaClasse[i] &amp;&amp; tab[i].nbEmprunts &gt; 0)</div>
-<div class="line"><span class="lineno">  699</span>            {</div>
-<div class="line"><span class="lineno">  700</span>                <span class="keywordflow">if</span> (iMax == -1 || tab[i].nbEmprunts &gt; tab[iMax].nbEmprunts)</div>
-<div class="line"><span class="lineno">  701</span>                {</div>
-<div class="line"><span class="lineno">  702</span>                    iMax = i;</div>
-<div class="line"><span class="lineno">  703</span>                }</div>
-<div class="line"><span class="lineno">  704</span>            }</div>
-<div class="line"><span class="lineno">  705</span>        }</div>
-<div class="line"><span class="lineno">  706</span>        <span class="keywordflow">if</span> (iMax == -1)</div>
-<div class="line"><span class="lineno">  707</span>        {</div>
-<div class="line"><span class="lineno">  708</span>            fini = 1; <span class="comment">/* plus aucun livre a classer */</span></div>
-<div class="line"><span class="lineno">  709</span>        }</div>
-<div class="line"><span class="lineno">  710</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  711</span>        {</div>
-<div class="line"><span class="lineno">  712</span>            printf(<span class="stringliteral">&quot;  %d. %s (%d emprunt(s))\n&quot;</span>, rang, tab[iMax].titre, tab[iMax].nbEmprunts);</div>
-<div class="line"><span class="lineno">  713</span>            dejaClasse[iMax] = 1;</div>
-<div class="line"><span class="lineno">  714</span>            rang++;</div>
-<div class="line"><span class="lineno">  715</span>        }</div>
-<div class="line"><span class="lineno">  716</span>    }</div>
-<div class="line"><span class="lineno">  717</span>    <span class="keywordflow">if</span> (rang == 1)</div>
-<div class="line"><span class="lineno">  718</span>    {</div>
-<div class="line"><span class="lineno">  719</span>        printf(<span class="stringliteral">&quot;  Aucun livre n&#39;a encore ete emprunte.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  720</span>    }</div>
-<div class="line"><span class="lineno">  721</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00694">694</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  695</span>{</div>
+<div class="line"><span class="lineno">  696</span>    <span class="keywordtype">int</span> dejaClasse[<a class="code hl_define" href="mediatheque_8h.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">TAILLE_MAX</a>] = { 0 };</div>
+<div class="line"><span class="lineno">  697</span> </div>
+<div class="line"><span class="lineno">  698</span>    printf(<span class="stringliteral">&quot;Top 3 des livres les plus empruntes :\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  699</span>    <span class="keywordtype">int</span> rang = 1;</div>
+<div class="line"><span class="lineno">  700</span>    <span class="keywordtype">int</span> fini = 0;</div>
+<div class="line"><span class="lineno">  701</span>    <span class="keywordflow">while</span> (rang &lt;= 3 &amp;&amp; !fini)</div>
+<div class="line"><span class="lineno">  702</span>    {</div>
+<div class="line"><span class="lineno">  703</span>        <span class="keywordtype">int</span> iMax = -1;</div>
+<div class="line"><span class="lineno">  704</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; taille; i++)</div>
+<div class="line"><span class="lineno">  705</span>        {</div>
+<div class="line"><span class="lineno">  706</span>            <span class="keywordflow">if</span> (!dejaClasse[i] &amp;&amp; tab[i].nbEmprunts &gt; 0)</div>
+<div class="line"><span class="lineno">  707</span>            {</div>
+<div class="line"><span class="lineno">  708</span>                <span class="keywordflow">if</span> (iMax == -1 || tab[i].nbEmprunts &gt; tab[iMax].nbEmprunts)</div>
+<div class="line"><span class="lineno">  709</span>                {</div>
+<div class="line"><span class="lineno">  710</span>                    iMax = i;</div>
+<div class="line"><span class="lineno">  711</span>                }</div>
+<div class="line"><span class="lineno">  712</span>            }</div>
+<div class="line"><span class="lineno">  713</span>        }</div>
+<div class="line"><span class="lineno">  714</span>        <span class="keywordflow">if</span> (iMax == -1)</div>
+<div class="line"><span class="lineno">  715</span>        {</div>
+<div class="line"><span class="lineno">  716</span>            fini = 1; <span class="comment">/* plus aucun livre a classer */</span></div>
+<div class="line"><span class="lineno">  717</span>        }</div>
+<div class="line"><span class="lineno">  718</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  719</span>        {</div>
+<div class="line"><span class="lineno">  720</span>            printf(<span class="stringliteral">&quot;  %d. %s (%d emprunt(s))\n&quot;</span>, rang, tab[iMax].titre, tab[iMax].nbEmprunts);</div>
+<div class="line"><span class="lineno">  721</span>            dejaClasse[iMax] = 1;</div>
+<div class="line"><span class="lineno">  722</span>            rang++;</div>
+<div class="line"><span class="lineno">  723</span>        }</div>
+<div class="line"><span class="lineno">  724</span>    }</div>
+<div class="line"><span class="lineno">  725</span>    <span class="keywordflow">if</span> (rang == 1)</div>
+<div class="line"><span class="lineno">  726</span>    {</div>
+<div class="line"><span class="lineno">  727</span>        printf(<span class="stringliteral">&quot;  Aucun livre n&#39;a encore ete emprunte.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  728</span>    }</div>
+<div class="line"><span class="lineno">  729</span>}</div>
 <div class="ttc" id="amediatheque_8h_html_ae6ad0540d5109a0200f0dde5dc5b4bf6"><div class="ttname"><a href="mediatheque_8h.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">TAILLE_MAX</a></div><div class="ttdeci">#define TAILLE_MAX</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8h_source.html#l00021">mediatheque.h:21</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -534,7 +548,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Affiche jusqu&#39;à 3 livres empruntés au moins une fois, du plus emprunté au moins emprunté." alt="" coords="303,5,403,33"/>
 <area shape="rect" href="mediatheque_8c.html#a0fe71866ad3bad445197fe7e56613cb5" title="Affiche les statistiques de la médiathèque : total, disponibles, empruntés, Top 3 des livres les plus..." alt="" coords="108,5,255,33"/>
 <area shape="poly" title=" " alt="" coords="285,19,255,22,255,17,290,19"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="90,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -604,7 +618,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="279,72,243,74,243,69,284,71"/>
 <area shape="rect" href="mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b" title="Supprime un livre identifié par son identifiant, après confirmation." alt="" coords="108,109,249,137"/>
 <area shape="poly" title=" " alt="" coords="295,89,229,111,228,106,290,90"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,57,60,85"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,57,60,85"/>
 <area shape="poly" title=" " alt="" coords="121,41,61,64,59,59,124,37"/>
 <area shape="poly" title=" " alt="" coords="96,73,61,74,59,69,100,70"/>
 <area shape="poly" title=" " alt="" coords="121,105,60,83,60,78,125,102"/>
@@ -721,7 +735,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_ad7e234724ddf2e0c18f9c5e5e5e1c75d_icgraph.png" border="0" usemap="#amediatheque_8c_ad7e234724ddf2e0c18f9c5e5e5e1c75d_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_ad7e234724ddf2e0c18f9c5e5e5e1c75d_icgraph" id="amediatheque_8c_ad7e234724ddf2e0c18f9c5e5e5e1c75d_icgraph">
 <area shape="rect" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="108,5,229,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -756,19 +770,27 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>VRAI si un livre placé avant la case i a la même catégorie. </p>
-<p>Fonction interne (static) reprise de categorieDejaVue (pseudo-code). </p>
+<p>Fonction interne (static) reprise de categorieDejaVue (pseudo-code).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tab</td><td>Tableau des livres. </td></tr>
+    <tr><td class="paramname">i</td><td>Indice du livre dont on teste la catégorie. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 si la catégorie du livre i apparaît déjà avant lui, 0 sinon. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00728">728</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  729</span>{</div>
-<div class="line"><span class="lineno">  730</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; i; j++)</div>
-<div class="line"><span class="lineno">  731</span>    {</div>
-<div class="line"><span class="lineno">  732</span>        <span class="keywordflow">if</span> (strcmp(tab[j].categorie, tab[i].categorie) == 0)</div>
-<div class="line"><span class="lineno">  733</span>        {</div>
-<div class="line"><span class="lineno">  734</span>            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  735</span>        }</div>
-<div class="line"><span class="lineno">  736</span>    }</div>
-<div class="line"><span class="lineno">  737</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  738</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00740">740</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  741</span>{</div>
+<div class="line"><span class="lineno">  742</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; i; j++)</div>
+<div class="line"><span class="lineno">  743</span>    {</div>
+<div class="line"><span class="lineno">  744</span>        <span class="keywordflow">if</span> (strcmp(tab[j].categorie, tab[i].categorie) == 0)</div>
+<div class="line"><span class="lineno">  745</span>        {</div>
+<div class="line"><span class="lineno">  746</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  747</span>        }</div>
+<div class="line"><span class="lineno">  748</span>    }</div>
+<div class="line"><span class="lineno">  749</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  750</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -779,7 +801,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="486,19,457,22,456,17,492,19"/>
 <area shape="rect" href="mediatheque_8c.html#a0fe71866ad3bad445197fe7e56613cb5" title="Affiche les statistiques de la médiathèque : total, disponibles, empruntés, Top 3 des livres les plus..." alt="" coords="108,5,255,33"/>
 <area shape="poly" title=" " alt="" coords="285,19,256,22,255,17,290,19"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="90,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -859,7 +881,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="279,37,249,34,250,28,285,36"/>
 <area shape="rect" href="mediatheque_8c.html#aab22ba90ea580b8e73db98e3d7082cb7" title="Vide entièrement la médiathèque, après confirmation." alt="" coords="109,57,248,85"/>
 <area shape="poly" title=" " alt="" coords="285,54,249,63,248,58,279,55"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,32,60,60"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,32,60,60"/>
 <area shape="poly" title=" " alt="" coords="90,36,61,43,59,38,94,33"/>
 <area shape="poly" title=" " alt="" coords="91,58,60,53,60,48,96,55"/>
 </map>
@@ -948,7 +970,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_a15715ae575b16aed43d9ad0751649172_icgraph.png" border="0" usemap="#amediatheque_8c_a15715ae575b16aed43d9ad0751649172_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_a15715ae575b16aed43d9ad0751649172_icgraph" id="amediatheque_8c_a15715ae575b16aed43d9ad0751649172_icgraph">
 <area shape="rect" title="Marque un livre comme emprunté et note le nom de l&#39;emprunteur." alt="" coords="108,5,229,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -988,18 +1010,27 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>VRAI si le livre j doit passer après le livre j + 1 pour le critère choisi (1 titre, 2 auteur, 3 catégorie, 4 identifiant). </p>
-<p>Fonction interne (static) reprise de estMalRange (pseudo-code). </p>
+<p>Fonction interne (static) reprise de estMalRange (pseudo-code).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tab</td><td>Tableau des livres. </td></tr>
+    <tr><td class="paramname">j</td><td>Indice du premier des deux livres voisins comparés (j et j + 1). </td></tr>
+    <tr><td class="paramname">mode</td><td>Critère de tri : 1 titre, 2 auteur, 3 catégorie, 4 identifiant. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 si les livres j et j + 1 doivent être échangés, 0 sinon. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00614">614</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  615</span>{</div>
-<div class="line"><span class="lineno">  616</span>    <span class="keywordflow">switch</span> (mode)</div>
-<div class="line"><span class="lineno">  617</span>    {</div>
-<div class="line"><span class="lineno">  618</span>        <span class="keywordflow">case</span> 1: <span class="keywordflow">return</span> strcmp(tab[j].titre, tab[j + 1].titre) &gt; 0;</div>
-<div class="line"><span class="lineno">  619</span>        <span class="keywordflow">case</span> 2: <span class="keywordflow">return</span> strcmp(tab[j].auteur, tab[j + 1].auteur) &gt; 0;</div>
-<div class="line"><span class="lineno">  620</span>        <span class="keywordflow">case</span> 3: <span class="keywordflow">return</span> strcmp(tab[j].categorie, tab[j + 1].categorie) &gt; 0;</div>
-<div class="line"><span class="lineno">  621</span>        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> tab[j].<a class="code hl_variable" href="structLivre.html#a2349ae4a2434038bf34c6bfef5569933">id</a> &gt; tab[j + 1].<a class="code hl_variable" href="structLivre.html#a2349ae4a2434038bf34c6bfef5569933">id</a>; <span class="comment">/* mode 4 : identifiant */</span></div>
-<div class="line"><span class="lineno">  622</span>    }</div>
-<div class="line"><span class="lineno">  623</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00619">619</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  620</span>{</div>
+<div class="line"><span class="lineno">  621</span>    <span class="keywordflow">switch</span> (mode)</div>
+<div class="line"><span class="lineno">  622</span>    {</div>
+<div class="line"><span class="lineno">  623</span>        <span class="keywordflow">case</span> 1: <span class="keywordflow">return</span> strcmp(tab[j].titre, tab[j + 1].titre) &gt; 0;</div>
+<div class="line"><span class="lineno">  624</span>        <span class="keywordflow">case</span> 2: <span class="keywordflow">return</span> strcmp(tab[j].auteur, tab[j + 1].auteur) &gt; 0;</div>
+<div class="line"><span class="lineno">  625</span>        <span class="keywordflow">case</span> 3: <span class="keywordflow">return</span> strcmp(tab[j].categorie, tab[j + 1].categorie) &gt; 0;</div>
+<div class="line"><span class="lineno">  626</span>        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> tab[j].<a class="code hl_variable" href="structLivre.html#a2349ae4a2434038bf34c6bfef5569933">id</a> &gt; tab[j + 1].<a class="code hl_variable" href="structLivre.html#a2349ae4a2434038bf34c6bfef5569933">id</a>; <span class="comment">/* mode 4 : identifiant */</span></div>
+<div class="line"><span class="lineno">  627</span>    }</div>
+<div class="line"><span class="lineno">  628</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1008,7 +1039,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="VRAI si le livre j doit passer après le livre j + 1 pour le critère choisi (1 titre,..." alt="" coords="269,5,375,33"/>
 <area shape="rect" href="mediatheque_8c.html#ac4e5e42e5065c5ba1702ff7fb0fc8da3" title="Trie la collection selon un critère au choix (titre, auteur, catégorie ou identifiant)." alt="" coords="108,5,221,33"/>
 <area shape="poly" title=" " alt="" coords="251,19,222,22,222,17,256,19"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -1107,7 +1138,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="474,133,555,161"/>
 <area shape="rect" href="mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="111,5,246,33"/>
 <area shape="poly" title=" " alt="" coords="494,120,465,85,446,68,425,54,381,36,334,25,288,20,247,18,245,13,289,14,335,20,383,31,428,49,450,63,469,81,499,121"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,159,60,186"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,159,60,186"/>
 <area shape="poly" title=" " alt="" coords="466,127,396,104,305,82,255,76,205,76,156,83,109,98,88,110,70,126,44,160,40,157,66,123,85,106,107,93,155,78,205,71,256,71,306,77,398,99,471,127"/>
 <area shape="rect" href="mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="118,107,239,134"/>
 <area shape="poly" title=" " alt="" coords="457,145,239,128,239,123,461,141"/>
@@ -1203,7 +1234,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Lit une ligne de texte saisie par l&#39;utilisateur, sans le &#39; &#39; final." alt="" coords="471,161,549,189"/>
 <area shape="rect" href="mediatheque_8c.html#a8af617ae4e77d69f080a8fd92043e16e" title="Lit une ligne de texte non vide, en redemandant tant que la saisie est vide." alt="" coords="291,109,423,137"/>
 <area shape="poly" title=" " alt="" coords="454,157,400,140,400,135,459,157"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,109,60,137"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,109,60,137"/>
 <area shape="poly" title=" " alt="" coords="459,193,386,214,296,227,248,229,200,226,152,218,107,203,85,190,66,173,41,140,43,135,70,169,88,186,109,198,154,213,201,221,248,224,296,222,385,209,454,193"/>
 <area shape="rect" href="mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="108,5,243,33"/>
 <area shape="poly" title=" " alt="" coords="323,100,286,75,242,48,217,36,216,31,244,43,288,70,328,100"/>
@@ -1303,7 +1334,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="273,110,237,117,236,112,278,109"/>
 <area shape="rect" href="mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5" title="Modifie un livre identifié par son id (titre, auteur, catégorie ou tout)." alt="" coords="111,161,240,189"/>
 <area shape="poly" title=" " alt="" coords="314,118,244,151,214,163,212,158,242,146,309,119"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,84,60,112"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,84,60,112"/>
 <area shape="poly" title=" " alt="" coords="118,42,109,48,54,85,50,81,106,44,122,38"/>
 <area shape="poly" title=" " alt="" coords="98,87,61,95,59,90,101,83"/>
 <area shape="poly" title=" " alt="" coords="97,111,60,105,60,100,102,108"/>
@@ -1422,7 +1453,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_af3d61ae7de3691d75459d1ba44d1e8d5_icgraph.png" border="0" usemap="#amediatheque_8c_af3d61ae7de3691d75459d1ba44d1e8d5_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_af3d61ae7de3691d75459d1ba44d1e8d5_icgraph" id="amediatheque_8c_af3d61ae7de3691d75459d1ba44d1e8d5_icgraph">
 <area shape="rect" title="Modifie un livre identifié par son id (titre, auteur, catégorie ou tout)." alt="" coords="108,5,237,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -1483,7 +1514,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_ac000fbe963e93aede1ae6d41706c527d_icgraph.png" border="0" usemap="#amediatheque_8c_ac000fbe963e93aede1ae6d41706c527d_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_ac000fbe963e93aede1ae6d41706c527d_icgraph" id="amediatheque_8c_ac000fbe963e93aede1ae6d41706c527d_icgraph">
 <area shape="rect" title="Recherche un livre par son auteur (comparaison exacte)." alt="" coords="108,5,261,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,94,18"/>
 </map>
 </div>
@@ -1546,7 +1577,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_a514a3ea54060df445fc9046eef281eff_icgraph.png" border="0" usemap="#amediatheque_8c_a514a3ea54060df445fc9046eef281eff_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_a514a3ea54060df445fc9046eef281eff_icgraph" id="amediatheque_8c_a514a3ea54060df445fc9046eef281eff_icgraph">
 <area shape="rect" title="Recherche un livre par son titre (comparaison exacte)." alt="" coords="108,5,248,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -1625,7 +1656,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_a459c71c4477b883e6b2233e44604fdf6_icgraph.png" border="0" usemap="#amediatheque_8c_a459c71c4477b883e6b2233e44604fdf6_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_a459c71c4477b883e6b2233e44604fdf6_icgraph" id="amediatheque_8c_a459c71c4477b883e6b2233e44604fdf6_icgraph">
 <area shape="rect" title="Marque un livre comme rendu (disponible) et efface l&#39;emprunteur." alt="" coords="108,5,203,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -1720,7 +1751,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_a1a211b627c8e1d1171d61afafdc0ad5b_icgraph.png" border="0" usemap="#amediatheque_8c_a1a211b627c8e1d1171d61afafdc0ad5b_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_a1a211b627c8e1d1171d61afafdc0ad5b_icgraph" id="amediatheque_8c_a1a211b627c8e1d1171d61afafdc0ad5b_icgraph">
 <area shape="rect" title="Supprime un livre identifié par son identifiant, après confirmation." alt="" coords="108,5,249,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,94,18"/>
 </map>
 </div>
@@ -1749,48 +1780,48 @@ Here is the caller graph for this function:</div>
 <p>Trie la collection selon un critère au choix (titre, auteur, catégorie ou identifiant). </p>
 <p>Fonctionnalité supplémentaire reprise de trierLivres (pseudo-code) : un sous-menu propose 4 critères de tri au lieu du seul titre. Tri à bulles dans tous les cas : à chaque passage i, on compare les livres voisins deux à deux et on les échange si besoin ; le plus grand élément restant remonte en fin de tableau. (Paramètres documentés dans <a class="el" href="mediatheque_8h.html" title="Déclarations pour « Ma Petite Médiathèque » - Partie 2 (fonctionnalités avancées).">mediatheque.h</a>.) </p>
 
-<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00636">636</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  637</span>{</div>
-<div class="line"><span class="lineno">  638</span>    <span class="keywordflow">if</span> (taille == 0)</div>
-<div class="line"><span class="lineno">  639</span>    {</div>
-<div class="line"><span class="lineno">  640</span>        printf(<span class="stringliteral">&quot;Aucun livre enregistre.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  641</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  642</span>    }</div>
-<div class="line"><span class="lineno">  643</span> </div>
-<div class="line"><span class="lineno">  644</span>    printf(<span class="stringliteral">&quot;1. Trier par titre\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  645</span>    printf(<span class="stringliteral">&quot;2. Trier par auteur\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  646</span>    printf(<span class="stringliteral">&quot;3. Trier par categorie\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  647</span>    printf(<span class="stringliteral">&quot;4. Trier par identifiant\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  648</span>    printf(<span class="stringliteral">&quot;0. Retour\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  649</span>    <span class="keywordtype">int</span> mode = <a class="code hl_function" href="#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
-<div class="line"><span class="lineno">  650</span>    <span class="keywordflow">if</span> (mode &lt; 0 || mode &gt; 4)</div>
-<div class="line"><span class="lineno">  651</span>    {</div>
-<div class="line"><span class="lineno">  652</span>        printf(<span class="stringliteral">&quot;Choix invalide.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  653</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  654</span>    }</div>
-<div class="line"><span class="lineno">  655</span>    <span class="keywordflow">if</span> (mode == 0)</div>
+<p class="definition">Definition at line <a class="el" href="mediatheque_8c_source.html#l00641">641</a> of file <a class="el" href="mediatheque_8c_source.html">mediatheque.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  642</span>{</div>
+<div class="line"><span class="lineno">  643</span>    <span class="keywordflow">if</span> (taille == 0)</div>
+<div class="line"><span class="lineno">  644</span>    {</div>
+<div class="line"><span class="lineno">  645</span>        printf(<span class="stringliteral">&quot;Aucun livre enregistre.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  646</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  647</span>    }</div>
+<div class="line"><span class="lineno">  648</span> </div>
+<div class="line"><span class="lineno">  649</span>    printf(<span class="stringliteral">&quot;1. Trier par titre\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  650</span>    printf(<span class="stringliteral">&quot;2. Trier par auteur\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  651</span>    printf(<span class="stringliteral">&quot;3. Trier par categorie\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  652</span>    printf(<span class="stringliteral">&quot;4. Trier par identifiant\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  653</span>    printf(<span class="stringliteral">&quot;0. Retour\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  654</span>    <span class="keywordtype">int</span> mode = <a class="code hl_function" href="#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
+<div class="line"><span class="lineno">  655</span>    <span class="keywordflow">if</span> (mode &lt; 0 || mode &gt; 4)</div>
 <div class="line"><span class="lineno">  656</span>    {</div>
-<div class="line"><span class="lineno">  657</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  658</span>    }</div>
-<div class="line"><span class="lineno">  659</span> </div>
-<div class="line"><span class="lineno">  660</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; taille - 1; i++)</div>
+<div class="line"><span class="lineno">  657</span>        printf(<span class="stringliteral">&quot;Choix invalide.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  658</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  659</span>    }</div>
+<div class="line"><span class="lineno">  660</span>    <span class="keywordflow">if</span> (mode == 0)</div>
 <div class="line"><span class="lineno">  661</span>    {</div>
-<div class="line"><span class="lineno">  662</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; taille - 1 - i; j++)</div>
-<div class="line"><span class="lineno">  663</span>        {</div>
-<div class="line"><span class="lineno">  664</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="#ab32f61a22258e5fe476e07a8c624e608">estMalRange</a>(tab, j, mode))</div>
-<div class="line"><span class="lineno">  665</span>            {</div>
-<div class="line"><span class="lineno">  666</span>                <span class="comment">/* La structure entière est échangée d&#39;un coup : plus besoin</span></div>
-<div class="line"><span class="lineno">  667</span><span class="comment">                   de répéter l&#39;échange champ par champ comme avec des</span></div>
-<div class="line"><span class="lineno">  668</span><span class="comment">                   tableaux parallèles. */</span></div>
-<div class="line"><span class="lineno">  669</span>                <a class="code hl_struct" href="structLivre.html">Livre</a> temp = tab[j];</div>
-<div class="line"><span class="lineno">  670</span>                tab[j] = tab[j + 1];</div>
-<div class="line"><span class="lineno">  671</span>                tab[j + 1] = temp;</div>
-<div class="line"><span class="lineno">  672</span>            }</div>
-<div class="line"><span class="lineno">  673</span>        }</div>
-<div class="line"><span class="lineno">  674</span>    }</div>
-<div class="line"><span class="lineno">  675</span>    printf(<span class="stringliteral">&quot;Livres tries.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  676</span>}</div>
-<div class="ttc" id="amediatheque_8c_html_ab32f61a22258e5fe476e07a8c624e608"><div class="ttname"><a href="#ab32f61a22258e5fe476e07a8c624e608">estMalRange</a></div><div class="ttdeci">static int estMalRange(Livre tab[], int j, int mode)</div><div class="ttdoc">VRAI si le livre j doit passer après le livre j + 1 pour le critère choisi (1 titre,...</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00614">mediatheque.c:614</a></div></div>
+<div class="line"><span class="lineno">  662</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  663</span>    }</div>
+<div class="line"><span class="lineno">  664</span> </div>
+<div class="line"><span class="lineno">  665</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; taille - 1; i++)</div>
+<div class="line"><span class="lineno">  666</span>    {</div>
+<div class="line"><span class="lineno">  667</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; taille - 1 - i; j++)</div>
+<div class="line"><span class="lineno">  668</span>        {</div>
+<div class="line"><span class="lineno">  669</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="#ab32f61a22258e5fe476e07a8c624e608">estMalRange</a>(tab, j, mode))</div>
+<div class="line"><span class="lineno">  670</span>            {</div>
+<div class="line"><span class="lineno">  671</span>                <span class="comment">/* La structure entière est échangée d&#39;un coup : plus besoin</span></div>
+<div class="line"><span class="lineno">  672</span><span class="comment">                   de répéter l&#39;échange champ par champ comme avec des</span></div>
+<div class="line"><span class="lineno">  673</span><span class="comment">                   tableaux parallèles. */</span></div>
+<div class="line"><span class="lineno">  674</span>                <a class="code hl_struct" href="structLivre.html">Livre</a> temp = tab[j];</div>
+<div class="line"><span class="lineno">  675</span>                tab[j] = tab[j + 1];</div>
+<div class="line"><span class="lineno">  676</span>                tab[j + 1] = temp;</div>
+<div class="line"><span class="lineno">  677</span>            }</div>
+<div class="line"><span class="lineno">  678</span>        }</div>
+<div class="line"><span class="lineno">  679</span>    }</div>
+<div class="line"><span class="lineno">  680</span>    printf(<span class="stringliteral">&quot;Livres tries.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  681</span>}</div>
+<div class="ttc" id="amediatheque_8c_html_ab32f61a22258e5fe476e07a8c624e608"><div class="ttname"><a href="#ab32f61a22258e5fe476e07a8c624e608">estMalRange</a></div><div class="ttdeci">static int estMalRange(Livre tab[], int j, int mode)</div><div class="ttdoc">VRAI si le livre j doit passer après le livre j + 1 pour le critère choisi (1 titre,...</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00619">mediatheque.c:619</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1811,7 +1842,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_ac4e5e42e5065c5ba1702ff7fb0fc8da3_icgraph.png" border="0" usemap="#amediatheque_8c_ac4e5e42e5065c5ba1702ff7fb0fc8da3_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_ac4e5e42e5065c5ba1702ff7fb0fc8da3_icgraph" id="amediatheque_8c_ac4e5e42e5065c5ba1702ff7fb0fc8da3_icgraph">
 <area shape="rect" title="Trie la collection selon un critère au choix (titre, auteur, catégorie ou identifiant)." alt="" coords="108,5,221,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -1891,7 +1922,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="297,143,227,165,226,159,302,141"/>
 <area shape="rect" href="mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b" title="Supprime un livre identifié par son identifiant, après confirmation." alt="" coords="108,213,249,241"/>
 <area shape="poly" title=" " alt="" coords="337,145,296,176,250,203,223,215,221,210,248,198,293,171,332,147"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,109,60,137"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,109,60,137"/>
 <area shape="poly" title=" " alt="" coords="115,42,109,48,73,79,47,110,42,107,69,76,106,44,119,38"/>
 <area shape="poly" title=" " alt="" coords="121,93,61,116,59,111,124,89"/>
 <area shape="poly" title=" " alt="" coords="96,125,61,126,59,121,100,121"/>
@@ -1943,7 +1974,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="603,294,556,315,555,310,598,296"/>
 <area shape="rect" href="mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="111,367,246,394"/>
 <area shape="poly" title=" " alt="" coords="504,250,468,312,448,338,431,355,386,375,338,386,290,390,247,390,246,385,290,385,337,381,384,370,428,350,444,335,463,309,499,253"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,211,60,238"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,211,60,238"/>
 <area shape="poly" title=" " alt="" coords="491,199,463,174,428,149,381,126,342,113,249,98,175,83,144,83,109,97,81,122,61,153,47,185,40,211,34,210,42,183,56,150,77,118,106,93,143,78,176,77,249,93,343,108,383,121,431,145,466,170,497,200"/>
 <area shape="rect" href="mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="118,211,239,238"/>
 <area shape="poly" title=" " alt="" coords="460,226,240,227,239,222,464,223"/>
@@ -2032,7 +2063,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="mediatheque_8c_aab22ba90ea580b8e73db98e3d7082cb7_icgraph.png" border="0" usemap="#amediatheque_8c_aab22ba90ea580b8e73db98e3d7082cb7_icgraph" loading="lazy" alt=""/></div>
 <map name="amediatheque_8c_aab22ba90ea580b8e73db98e3d7082cb7_icgraph" id="amediatheque_8c_aab22ba90ea580b8e73db98e3d7082cb7_icgraph">
 <area shape="rect" title="Vide entièrement la médiathèque, après confirmation." alt="" coords="108,5,247,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="90,20,60,22,60,17,95,18"/>
 </map>
 </div>

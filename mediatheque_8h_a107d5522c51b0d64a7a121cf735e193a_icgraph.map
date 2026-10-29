@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="474,133,555,161"/>
 <area shape="rect" id="Node000002" href="$mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="111,5,246,33"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="494,120,465,85,446,68,425,54,381,36,334,25,288,20,247,18,245,13,289,14,335,20,383,31,428,49,450,63,469,81,499,121"/>
-<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,159,60,186"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,159,60,186"/>
 <area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="466,127,396,104,305,82,255,76,205,76,156,83,109,98,88,110,70,126,44,160,40,157,66,123,85,106,107,93,155,78,205,71,256,71,306,77,398,99,471,127"/>
 <area shape="rect" id="Node000004" href="$mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="118,107,239,134"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="457,145,239,128,239,123,461,141"/>

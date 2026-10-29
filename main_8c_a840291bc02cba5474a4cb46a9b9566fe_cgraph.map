@@ -1,5 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,393,60,421"/>
+<area shape="rect" id="Node000001" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,393,60,421"/>
 <area shape="rect" id="Node000002" href="$mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="117,367,252,394"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,400,103,393,100,397,62,405"/>
 <area shape="rect" id="Node000004" href="$mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="538,368,619,396"/>

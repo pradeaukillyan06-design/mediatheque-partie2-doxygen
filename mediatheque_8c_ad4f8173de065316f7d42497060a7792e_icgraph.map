@@ -6,7 +6,7 @@
 <area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="603,294,556,315,555,310,598,296"/>
 <area shape="rect" id="Node000003" href="$mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="111,367,246,394"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="504,250,468,312,448,338,431,355,386,375,338,386,290,390,247,390,246,385,290,385,337,381,384,370,428,350,444,335,463,309,499,253"/>
-<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,211,60,238"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,211,60,238"/>
 <area shape="poly" id="edge11_Node000002_Node000004" title=" " alt="" coords="491,199,463,174,428,149,381,126,342,113,249,98,175,83,144,83,109,97,81,122,61,153,47,185,40,211,34,210,42,183,56,150,77,118,106,93,143,78,176,77,249,93,343,108,383,121,431,145,466,170,497,200"/>
 <area shape="rect" id="Node000005" href="$mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d" title="Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection." alt="" coords="118,211,239,238"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="460,226,240,227,239,222,464,223"/>

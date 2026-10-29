@@ -2,6 +2,6 @@
 <area shape="rect" id="Node000001" title="Affiche jusqu&#39;à 3 livres empruntés au moins une fois, du plus emprunté au moins emprunté." alt="" coords="303,5,403,33"/>
 <area shape="rect" id="Node000002" href="$mediatheque_8c.html#a0fe71866ad3bad445197fe7e56613cb5" title="Affiche les statistiques de la médiathèque : total, disponibles, empruntés, Top 3 des livres les plus..." alt="" coords="108,5,255,33"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,19,255,22,255,17,290,19"/>
-<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,20,60,22,60,17,95,18"/>
 </map>

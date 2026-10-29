@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Lit une ligne de texte saisie par l&#39;utilisateur, sans le &#39; &#39; final." alt="" coords="471,161,549,189"/>
 <area shape="rect" id="Node000002" href="$mediatheque_8c.html#a8af617ae4e77d69f080a8fd92043e16e" title="Lit une ligne de texte non vide, en redemandant tant que la saisie est vide." alt="" coords="291,109,423,137"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="454,157,400,140,400,135,459,157"/>
-<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,109,60,137"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,109,60,137"/>
 <area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="459,193,386,214,296,227,248,229,200,226,152,218,107,203,85,190,66,173,41,140,43,135,70,169,88,186,109,198,154,213,201,221,248,224,296,222,385,209,454,193"/>
 <area shape="rect" id="Node000003" href="$mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="108,5,243,33"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,100,286,75,242,48,217,36,216,31,244,43,288,70,328,100"/>

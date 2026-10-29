@@ -117,6 +117,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a9491d6a1757a094d3aa2c1258707205d" id="r_a9491d6a1757a094d3aa2c1258707205d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9491d6a1757a094d3aa2c1258707205d">afficherMenu</a> (void)</td></tr>
 <tr class="memdesc:a9491d6a1757a094d3aa2c1258707205d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le menu principal à l'écran.  <br /></td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point d'entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix de l'utilisateur.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Programme principal « Ma Petite Médiathèque » - Partie 2 (menu complet). </p>
@@ -172,7 +173,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="main_8c_a9491d6a1757a094d3aa2c1258707205d_icgraph.png" border="0" usemap="#amain_8c_a9491d6a1757a094d3aa2c1258707205d_icgraph" loading="lazy" alt=""/></div>
 <map name="amain_8c_a9491d6a1757a094d3aa2c1258707205d_icgraph" id="amain_8c_a9491d6a1757a094d3aa2c1258707205d_icgraph">
 <area shape="rect" title="Affiche le menu principal à l&#39;écran." alt="" coords="108,5,214,33"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>
 </div>
@@ -194,177 +195,181 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00057">57</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
-<div class="line"><span class="lineno">   59</span>    <a class="code hl_struct" href="structLivre.html">Livre</a> tab[<a class="code hl_define" href="mediatheque_8h.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">TAILLE_MAX</a>];</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordtype">int</span> nbLivres = 0; <span class="comment">/* nombre de livres reellement enregistres */</span></div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordtype">int</span> choix;</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>    <span class="comment">/* Boucle principale : do...while + switch, comme demandé dans le cahier</span></div>
-<div class="line"><span class="lineno">   64</span><span class="comment">       des charges. Elle s&#39;exécute au moins une fois (do...while) et continue</span></div>
-<div class="line"><span class="lineno">   65</span><span class="comment">       tant que l&#39;utilisateur n&#39;a pas choisi 0 (condition testée en bas de</span></div>
-<div class="line"><span class="lineno">   66</span><span class="comment">       boucle). */</span></div>
-<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">   68</span>    {</div>
-<div class="line"><span class="lineno">   69</span>        <a class="code hl_function" href="#a9491d6a1757a094d3aa2c1258707205d">afficherMenu</a>();</div>
-<div class="line"><span class="lineno">   70</span>        <span class="comment">/* lireEntier redemande tant que la saisie n&#39;est pas un nombre : une</span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">           lettre tapée ici ne fait plus boucler le menu à l&#39;infini. */</span></div>
-<div class="line"><span class="lineno">   72</span>        choix = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">switch</span> (choix)</div>
-<div class="line"><span class="lineno">   75</span>        {</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">   77</span>            {</div>
-<div class="line"><span class="lineno">   78</span>                <span class="comment">/* &amp;nbLivres : on transmet l&#39;adresse de nbLivres (et non sa</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">                   valeur) pour qu&#39;ajouterElement puisse la modifier</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">                   durablement depuis main() via le pointeur *taille. */</span></div>
-<div class="line"><span class="lineno">   81</span>                <a class="code hl_function" href="mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d">ajouterElement</a>(tab, &amp;nbLivres, <a class="code hl_define" href="mediatheque_8h.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">TAILLE_MAX</a>);</div>
-<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">   85</span>            {</div>
-<div class="line"><span class="lineno">   86</span>                <a class="code hl_function" href="mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae">afficherCollection</a>(tab, nbLivres);</div>
-<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   88</span>            }</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno">   90</span>            {</div>
-<div class="line"><span class="lineno">   91</span>                <span class="comment">/* Sous-menu : fonctionnalite supplementaire reprise de</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">                   rechercherLivre (pseudo-code) ; rechercherParTitre reste</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">                   la fonction exigee par le cahier des charges, utilisee</span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">                   par le choix 1 ci-dessous. rechercherParAuteur est</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">                   l&#39;exercice supplementaire 1.8 &quot;recherche par auteur&quot;. */</span></div>
-<div class="line"><span class="lineno">   96</span>                printf(<span class="stringliteral">&quot;1. Rechercher par titre\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   97</span>                printf(<span class="stringliteral">&quot;2. Rechercher par auteur\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   98</span>                printf(<span class="stringliteral">&quot;0. Retour\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordtype">int</span> mode = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordtype">char</span> texteCherche[<a class="code hl_define" href="mediatheque_8h.html#a5d3b541a4700a75af2b5228548d6b3b2">TAILLE_TEXTE</a> + 1];</div>
-<div class="line"><span class="lineno">  102</span>                <span class="keywordtype">int</span> indice = -1;</div>
-<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">if</span> (mode == 1)</div>
-<div class="line"><span class="lineno">  104</span>                {</div>
-<div class="line"><span class="lineno">  105</span>                    printf(<span class="stringliteral">&quot;Titre recherche : &quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>                    <a class="code hl_function" href="mediatheque_8c.html#a8b37e72a483710e1d665d3aa0d78d3fe">lireLigne</a>(texteCherche, <a class="code hl_define" href="mediatheque_8h.html#a5d3b541a4700a75af2b5228548d6b3b2">TAILLE_TEXTE</a> + 1);</div>
-<div class="line"><span class="lineno">  107</span>                    indice = <a class="code hl_function" href="mediatheque_8c.html#a514a3ea54060df445fc9046eef281eff">rechercherParTitre</a>(tab, nbLivres, texteCherche);</div>
-<div class="line"><span class="lineno">  108</span>                }</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode == 2)</div>
-<div class="line"><span class="lineno">  110</span>                {</div>
-<div class="line"><span class="lineno">  111</span>                    printf(<span class="stringliteral">&quot;Auteur recherche : &quot;</span>);</div>
-<div class="line"><span class="lineno">  112</span>                    <a class="code hl_function" href="mediatheque_8c.html#a8b37e72a483710e1d665d3aa0d78d3fe">lireLigne</a>(texteCherche, <a class="code hl_define" href="mediatheque_8h.html#a5d3b541a4700a75af2b5228548d6b3b2">TAILLE_TEXTE</a> + 1);</div>
-<div class="line"><span class="lineno">  113</span>                    indice = <a class="code hl_function" href="mediatheque_8c.html#ac000fbe963e93aede1ae6d41706c527d">rechercherParAuteur</a>(tab, nbLivres, texteCherche);</div>
-<div class="line"><span class="lineno">  114</span>                }</div>
-<div class="line"><span class="lineno">  115</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode != 0)</div>
-<div class="line"><span class="lineno">  116</span>                {</div>
-<div class="line"><span class="lineno">  117</span>                    printf(<span class="stringliteral">&quot;Choix invalide.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  118</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  119</span>                }</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">if</span> (mode == 0)</div>
-<div class="line"><span class="lineno">  122</span>                {</div>
-<div class="line"><span class="lineno">  123</span>                    <span class="keywordflow">break</span>;</div>
+<p>Point d'entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix de l'utilisateur. </p>
+<p>Le tableau des livres (tab) et le nombre de livres enregistrés (nbLivres) sont déclarés ici et transmis aux fonctions de <a class="el" href="mediatheque_8c.html" title="Définitions des fonctions pour « Ma Petite Médiathèque » - Partie 2.">mediatheque.c</a>. La boucle do...while s'arrête quand l'utilisateur choisit 0.</p>
+<dl class="section return"><dt>Returns</dt><dd>0 lorsque le programme se termine normalement. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00067">67</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>{</div>
+<div class="line"><span class="lineno">   69</span>    <a class="code hl_struct" href="structLivre.html">Livre</a> tab[<a class="code hl_define" href="mediatheque_8h.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">TAILLE_MAX</a>];</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordtype">int</span> nbLivres = 0; <span class="comment">/* nombre de livres reellement enregistres */</span></div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordtype">int</span> choix;</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <span class="comment">/* Boucle principale : do...while + switch, comme demandé dans le cahier</span></div>
+<div class="line"><span class="lineno">   74</span><span class="comment">       des charges. Elle s&#39;exécute au moins une fois (do...while) et continue</span></div>
+<div class="line"><span class="lineno">   75</span><span class="comment">       tant que l&#39;utilisateur n&#39;a pas choisi 0 (condition testée en bas de</span></div>
+<div class="line"><span class="lineno">   76</span><span class="comment">       boucle). */</span></div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_function" href="#a9491d6a1757a094d3aa2c1258707205d">afficherMenu</a>();</div>
+<div class="line"><span class="lineno">   80</span>        <span class="comment">/* lireEntier redemande tant que la saisie n&#39;est pas un nombre : une</span></div>
+<div class="line"><span class="lineno">   81</span><span class="comment">           lettre tapée ici ne fait plus boucler le menu à l&#39;infini. */</span></div>
+<div class="line"><span class="lineno">   82</span>        choix = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">switch</span> (choix)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                <span class="comment">/* &amp;nbLivres : on transmet l&#39;adresse de nbLivres (et non sa</span></div>
+<div class="line"><span class="lineno">   89</span><span class="comment">                   valeur) pour qu&#39;ajouterElement puisse la modifier</span></div>
+<div class="line"><span class="lineno">   90</span><span class="comment">                   durablement depuis main() via le pointeur *taille. */</span></div>
+<div class="line"><span class="lineno">   91</span>                <a class="code hl_function" href="mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d">ajouterElement</a>(tab, &amp;nbLivres, <a class="code hl_define" href="mediatheque_8h.html#ae6ad0540d5109a0200f0dde5dc5b4bf6">TAILLE_MAX</a>);</div>
+<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   95</span>            {</div>
+<div class="line"><span class="lineno">   96</span>                <a class="code hl_function" href="mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae">afficherCollection</a>(tab, nbLivres);</div>
+<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                <span class="comment">/* Sous-menu : fonctionnalite supplementaire reprise de</span></div>
+<div class="line"><span class="lineno">  102</span><span class="comment">                   rechercherLivre (pseudo-code) ; rechercherParTitre reste</span></div>
+<div class="line"><span class="lineno">  103</span><span class="comment">                   la fonction exigee par le cahier des charges, utilisee</span></div>
+<div class="line"><span class="lineno">  104</span><span class="comment">                   par le choix 1 ci-dessous. rechercherParAuteur est</span></div>
+<div class="line"><span class="lineno">  105</span><span class="comment">                   l&#39;exercice supplementaire 1.8 &quot;recherche par auteur&quot;. */</span></div>
+<div class="line"><span class="lineno">  106</span>                printf(<span class="stringliteral">&quot;1. Rechercher par titre\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  107</span>                printf(<span class="stringliteral">&quot;2. Rechercher par auteur\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span>                printf(<span class="stringliteral">&quot;0. Retour\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordtype">int</span> mode = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>                <span class="keywordtype">char</span> texteCherche[<a class="code hl_define" href="mediatheque_8h.html#a5d3b541a4700a75af2b5228548d6b3b2">TAILLE_TEXTE</a> + 1];</div>
+<div class="line"><span class="lineno">  112</span>                <span class="keywordtype">int</span> indice = -1;</div>
+<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">if</span> (mode == 1)</div>
+<div class="line"><span class="lineno">  114</span>                {</div>
+<div class="line"><span class="lineno">  115</span>                    printf(<span class="stringliteral">&quot;Titre recherche : &quot;</span>);</div>
+<div class="line"><span class="lineno">  116</span>                    <a class="code hl_function" href="mediatheque_8c.html#a8b37e72a483710e1d665d3aa0d78d3fe">lireLigne</a>(texteCherche, <a class="code hl_define" href="mediatheque_8h.html#a5d3b541a4700a75af2b5228548d6b3b2">TAILLE_TEXTE</a> + 1);</div>
+<div class="line"><span class="lineno">  117</span>                    indice = <a class="code hl_function" href="mediatheque_8c.html#a514a3ea54060df445fc9046eef281eff">rechercherParTitre</a>(tab, nbLivres, texteCherche);</div>
+<div class="line"><span class="lineno">  118</span>                }</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode == 2)</div>
+<div class="line"><span class="lineno">  120</span>                {</div>
+<div class="line"><span class="lineno">  121</span>                    printf(<span class="stringliteral">&quot;Auteur recherche : &quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span>                    <a class="code hl_function" href="mediatheque_8c.html#a8b37e72a483710e1d665d3aa0d78d3fe">lireLigne</a>(texteCherche, <a class="code hl_define" href="mediatheque_8h.html#a5d3b541a4700a75af2b5228548d6b3b2">TAILLE_TEXTE</a> + 1);</div>
+<div class="line"><span class="lineno">  123</span>                    indice = <a class="code hl_function" href="mediatheque_8c.html#ac000fbe963e93aede1ae6d41706c527d">rechercherParAuteur</a>(tab, nbLivres, texteCherche);</div>
 <div class="line"><span class="lineno">  124</span>                }</div>
-<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">if</span> (indice == -1)</div>
+<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode != 0)</div>
 <div class="line"><span class="lineno">  126</span>                {</div>
-<div class="line"><span class="lineno">  127</span>                    printf(<span class="stringliteral">&quot;Aucun livre ne correspond.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  128</span>                }</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  130</span>                {</div>
-<div class="line"><span class="lineno">  131</span>                    <span class="comment">/* Meme format d&#39;affichage que afficherUnLivre (interne a</span></div>
-<div class="line"><span class="lineno">  132</span><span class="comment">                       mediatheque.c) : id | titre | auteur | categorie |</span></div>
-<div class="line"><span class="lineno">  133</span><span class="comment">                       annee | etat (+ emprunteur si emprunte). */</span></div>
-<div class="line"><span class="lineno">  134</span>                    printf(<span class="stringliteral">&quot;%d | %s | %s | %s | %d | &quot;</span>,</div>
-<div class="line"><span class="lineno">  135</span>                           tab[indice].<span class="keywordtype">id</span>, tab[indice].titre, tab[indice].auteur,</div>
-<div class="line"><span class="lineno">  136</span>                           tab[indice].categorie, tab[indice].annee);</div>
-<div class="line"><span class="lineno">  137</span>                    <span class="keywordflow">if</span> (tab[indice].disponible)</div>
-<div class="line"><span class="lineno">  138</span>                    {</div>
-<div class="line"><span class="lineno">  139</span>                        printf(<span class="stringliteral">&quot;Disponible\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  140</span>                    }</div>
-<div class="line"><span class="lineno">  141</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  142</span>                    {</div>
-<div class="line"><span class="lineno">  143</span>                        printf(<span class="stringliteral">&quot;Emprunte par %s\n&quot;</span>, tab[indice].emprunteur);</div>
-<div class="line"><span class="lineno">  144</span>                    }</div>
-<div class="line"><span class="lineno">  145</span>                }</div>
-<div class="line"><span class="lineno">  146</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  147</span>            }</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno">  149</span>            {</div>
-<div class="line"><span class="lineno">  150</span>                printf(<span class="stringliteral">&quot;Identifiant du livre a modifier : &quot;</span>);</div>
-<div class="line"><span class="lineno">  151</span>                <span class="keywordtype">int</span> idCible = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
-<div class="line"><span class="lineno">  152</span>                <a class="code hl_function" href="mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5">modifierElement</a>(tab, nbLivres, idCible);</div>
-<div class="line"><span class="lineno">  153</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  154</span>            }</div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">case</span> 5:</div>
-<div class="line"><span class="lineno">  156</span>            {</div>
-<div class="line"><span class="lineno">  157</span>                <span class="comment">/* Sous-menu : fonctionnalite supplementaire reprise de</span></div>
-<div class="line"><span class="lineno">  158</span><span class="comment">                   supprimerLivre (pseudo-code) : un livre, ou toute la</span></div>
-<div class="line"><span class="lineno">  159</span><span class="comment">                   mediatheque d&#39;un coup. */</span></div>
-<div class="line"><span class="lineno">  160</span>                printf(<span class="stringliteral">&quot;1. Supprimer un livre\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  161</span>                printf(<span class="stringliteral">&quot;2. Supprimer tous les livres\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  162</span>                printf(<span class="stringliteral">&quot;0. Retour\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  163</span>                <span class="keywordtype">int</span> mode = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>                <span class="keywordflow">if</span> (mode == 1)</div>
-<div class="line"><span class="lineno">  166</span>                {</div>
-<div class="line"><span class="lineno">  167</span>                    printf(<span class="stringliteral">&quot;Identifiant du livre a supprimer : &quot;</span>);</div>
-<div class="line"><span class="lineno">  168</span>                    <span class="keywordtype">int</span> idCible = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
-<div class="line"><span class="lineno">  169</span>                    <span class="comment">/* &amp;nbLivres : supprimerElement doit pouvoir reduire</span></div>
-<div class="line"><span class="lineno">  170</span><span class="comment">                       durablement le nombre de livres enregistres dans</span></div>
-<div class="line"><span class="lineno">  171</span><span class="comment">                       main(), meme raison que pour ajouterElement (case 1). */</span></div>
-<div class="line"><span class="lineno">  172</span>                    <a class="code hl_function" href="mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b">supprimerElement</a>(tab, &amp;nbLivres, idCible);</div>
-<div class="line"><span class="lineno">  173</span>                }</div>
-<div class="line"><span class="lineno">  174</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode == 2)</div>
-<div class="line"><span class="lineno">  175</span>                {</div>
-<div class="line"><span class="lineno">  176</span>                    <span class="comment">/* &amp;nbLivres : meme raison, viderMediatheque remet le</span></div>
-<div class="line"><span class="lineno">  177</span><span class="comment">                       nombre de livres a 0 dans main(). */</span></div>
-<div class="line"><span class="lineno">  178</span>                    <a class="code hl_function" href="mediatheque_8c.html#aab22ba90ea580b8e73db98e3d7082cb7">viderMediatheque</a>(&amp;nbLivres);</div>
-<div class="line"><span class="lineno">  179</span>                }</div>
-<div class="line"><span class="lineno">  180</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode != 0)</div>
-<div class="line"><span class="lineno">  181</span>                {</div>
-<div class="line"><span class="lineno">  182</span>                    printf(<span class="stringliteral">&quot;Choix invalide.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  127</span>                    printf(<span class="stringliteral">&quot;Choix invalide.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  129</span>                }</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">if</span> (mode == 0)</div>
+<div class="line"><span class="lineno">  132</span>                {</div>
+<div class="line"><span class="lineno">  133</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  134</span>                }</div>
+<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">if</span> (indice == -1)</div>
+<div class="line"><span class="lineno">  136</span>                {</div>
+<div class="line"><span class="lineno">  137</span>                    printf(<span class="stringliteral">&quot;Aucun livre ne correspond.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>                }</div>
+<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  140</span>                {</div>
+<div class="line"><span class="lineno">  141</span>                    <span class="comment">/* Meme format d&#39;affichage que afficherUnLivre (interne a</span></div>
+<div class="line"><span class="lineno">  142</span><span class="comment">                       mediatheque.c) : id | titre | auteur | categorie |</span></div>
+<div class="line"><span class="lineno">  143</span><span class="comment">                       annee | etat (+ emprunteur si emprunte). */</span></div>
+<div class="line"><span class="lineno">  144</span>                    printf(<span class="stringliteral">&quot;%d | %s | %s | %s | %d | &quot;</span>,</div>
+<div class="line"><span class="lineno">  145</span>                           tab[indice].<span class="keywordtype">id</span>, tab[indice].titre, tab[indice].auteur,</div>
+<div class="line"><span class="lineno">  146</span>                           tab[indice].categorie, tab[indice].annee);</div>
+<div class="line"><span class="lineno">  147</span>                    <span class="keywordflow">if</span> (tab[indice].disponible)</div>
+<div class="line"><span class="lineno">  148</span>                    {</div>
+<div class="line"><span class="lineno">  149</span>                        printf(<span class="stringliteral">&quot;Disponible\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  150</span>                    }</div>
+<div class="line"><span class="lineno">  151</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  152</span>                    {</div>
+<div class="line"><span class="lineno">  153</span>                        printf(<span class="stringliteral">&quot;Emprunte par %s\n&quot;</span>, tab[indice].emprunteur);</div>
+<div class="line"><span class="lineno">  154</span>                    }</div>
+<div class="line"><span class="lineno">  155</span>                }</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">  159</span>            {</div>
+<div class="line"><span class="lineno">  160</span>                printf(<span class="stringliteral">&quot;Identifiant du livre a modifier : &quot;</span>);</div>
+<div class="line"><span class="lineno">  161</span>                <span class="keywordtype">int</span> idCible = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
+<div class="line"><span class="lineno">  162</span>                <a class="code hl_function" href="mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5">modifierElement</a>(tab, nbLivres, idCible);</div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  164</span>            }</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">  166</span>            {</div>
+<div class="line"><span class="lineno">  167</span>                <span class="comment">/* Sous-menu : fonctionnalite supplementaire reprise de</span></div>
+<div class="line"><span class="lineno">  168</span><span class="comment">                   supprimerLivre (pseudo-code) : un livre, ou toute la</span></div>
+<div class="line"><span class="lineno">  169</span><span class="comment">                   mediatheque d&#39;un coup. */</span></div>
+<div class="line"><span class="lineno">  170</span>                printf(<span class="stringliteral">&quot;1. Supprimer un livre\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  171</span>                printf(<span class="stringliteral">&quot;2. Supprimer tous les livres\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  172</span>                printf(<span class="stringliteral">&quot;0. Retour\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  173</span>                <span class="keywordtype">int</span> mode = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>                <span class="keywordflow">if</span> (mode == 1)</div>
+<div class="line"><span class="lineno">  176</span>                {</div>
+<div class="line"><span class="lineno">  177</span>                    printf(<span class="stringliteral">&quot;Identifiant du livre a supprimer : &quot;</span>);</div>
+<div class="line"><span class="lineno">  178</span>                    <span class="keywordtype">int</span> idCible = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
+<div class="line"><span class="lineno">  179</span>                    <span class="comment">/* &amp;nbLivres : supprimerElement doit pouvoir reduire</span></div>
+<div class="line"><span class="lineno">  180</span><span class="comment">                       durablement le nombre de livres enregistres dans</span></div>
+<div class="line"><span class="lineno">  181</span><span class="comment">                       main(), meme raison que pour ajouterElement (case 1). */</span></div>
+<div class="line"><span class="lineno">  182</span>                    <a class="code hl_function" href="mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b">supprimerElement</a>(tab, &amp;nbLivres, idCible);</div>
 <div class="line"><span class="lineno">  183</span>                }</div>
-<div class="line"><span class="lineno">  184</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  185</span>            }</div>
-<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">case</span> 6:</div>
-<div class="line"><span class="lineno">  187</span>            {</div>
-<div class="line"><span class="lineno">  188</span>                printf(<span class="stringliteral">&quot;Identifiant du livre a emprunter : &quot;</span>);</div>
-<div class="line"><span class="lineno">  189</span>                <span class="keywordtype">int</span> idCible = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
-<div class="line"><span class="lineno">  190</span>                <a class="code hl_function" href="mediatheque_8c.html#a15715ae575b16aed43d9ad0751649172">emprunterLivre</a>(tab, nbLivres, idCible);</div>
-<div class="line"><span class="lineno">  191</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  192</span>            }</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">case</span> 7:</div>
-<div class="line"><span class="lineno">  194</span>            {</div>
-<div class="line"><span class="lineno">  195</span>                printf(<span class="stringliteral">&quot;Identifiant du livre a retourner : &quot;</span>);</div>
-<div class="line"><span class="lineno">  196</span>                <span class="keywordtype">int</span> idCible = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
-<div class="line"><span class="lineno">  197</span>                <a class="code hl_function" href="mediatheque_8c.html#a459c71c4477b883e6b2233e44604fdf6">rendreLivre</a>(tab, nbLivres, idCible);</div>
-<div class="line"><span class="lineno">  198</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  199</span>            }</div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">case</span> 8:</div>
-<div class="line"><span class="lineno">  201</span>            {</div>
-<div class="line"><span class="lineno">  202</span>                <a class="code hl_function" href="mediatheque_8c.html#ac4e5e42e5065c5ba1702ff7fb0fc8da3">trierCollection</a>(tab, nbLivres);</div>
-<div class="line"><span class="lineno">  203</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  204</span>            }</div>
-<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">case</span> 9:</div>
-<div class="line"><span class="lineno">  206</span>            {</div>
-<div class="line"><span class="lineno">  207</span>                <a class="code hl_function" href="mediatheque_8c.html#a0fe71866ad3bad445197fe7e56613cb5">afficherStatistiques</a>(tab, nbLivres);</div>
+<div class="line"><span class="lineno">  184</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode == 2)</div>
+<div class="line"><span class="lineno">  185</span>                {</div>
+<div class="line"><span class="lineno">  186</span>                    <span class="comment">/* &amp;nbLivres : meme raison, viderMediatheque remet le</span></div>
+<div class="line"><span class="lineno">  187</span><span class="comment">                       nombre de livres a 0 dans main(). */</span></div>
+<div class="line"><span class="lineno">  188</span>                    <a class="code hl_function" href="mediatheque_8c.html#aab22ba90ea580b8e73db98e3d7082cb7">viderMediatheque</a>(&amp;nbLivres);</div>
+<div class="line"><span class="lineno">  189</span>                }</div>
+<div class="line"><span class="lineno">  190</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mode != 0)</div>
+<div class="line"><span class="lineno">  191</span>                {</div>
+<div class="line"><span class="lineno">  192</span>                    printf(<span class="stringliteral">&quot;Choix invalide.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  193</span>                }</div>
+<div class="line"><span class="lineno">  194</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  195</span>            }</div>
+<div class="line"><span class="lineno">  196</span>            <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno">  197</span>            {</div>
+<div class="line"><span class="lineno">  198</span>                printf(<span class="stringliteral">&quot;Identifiant du livre a emprunter : &quot;</span>);</div>
+<div class="line"><span class="lineno">  199</span>                <span class="keywordtype">int</span> idCible = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
+<div class="line"><span class="lineno">  200</span>                <a class="code hl_function" href="mediatheque_8c.html#a15715ae575b16aed43d9ad0751649172">emprunterLivre</a>(tab, nbLivres, idCible);</div>
+<div class="line"><span class="lineno">  201</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  202</span>            }</div>
+<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno">  204</span>            {</div>
+<div class="line"><span class="lineno">  205</span>                printf(<span class="stringliteral">&quot;Identifiant du livre a retourner : &quot;</span>);</div>
+<div class="line"><span class="lineno">  206</span>                <span class="keywordtype">int</span> idCible = <a class="code hl_function" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a>();</div>
+<div class="line"><span class="lineno">  207</span>                <a class="code hl_function" href="mediatheque_8c.html#a459c71c4477b883e6b2233e44604fdf6">rendreLivre</a>(tab, nbLivres, idCible);</div>
 <div class="line"><span class="lineno">  208</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  209</span>            }</div>
-<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">case</span> 8:</div>
 <div class="line"><span class="lineno">  211</span>            {</div>
-<div class="line"><span class="lineno">  212</span>                printf(<span class="stringliteral">&quot;Au revoir !\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  212</span>                <a class="code hl_function" href="mediatheque_8c.html#ac4e5e42e5065c5ba1702ff7fb0fc8da3">trierCollection</a>(tab, nbLivres);</div>
 <div class="line"><span class="lineno">  213</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  214</span>            }</div>
-<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">case</span> 9:</div>
 <div class="line"><span class="lineno">  216</span>            {</div>
-<div class="line"><span class="lineno">  217</span>                printf(<span class="stringliteral">&quot;Choix invalide.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  217</span>                <a class="code hl_function" href="mediatheque_8c.html#a0fe71866ad3bad445197fe7e56613cb5">afficherStatistiques</a>(tab, nbLivres);</div>
 <div class="line"><span class="lineno">  218</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  219</span>            }</div>
-<div class="line"><span class="lineno">  220</span>        }</div>
-<div class="line"><span class="lineno">  221</span>    }</div>
-<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">while</span> (choix != 0);</div>
-<div class="line"><span class="lineno">  223</span> </div>
-<div class="line"><span class="lineno">  224</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  225</span>}</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  221</span>            {</div>
+<div class="line"><span class="lineno">  222</span>                printf(<span class="stringliteral">&quot;Au revoir !\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  223</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  224</span>            }</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  226</span>            {</div>
+<div class="line"><span class="lineno">  227</span>                printf(<span class="stringliteral">&quot;Choix invalide.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  228</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  229</span>            }</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+<div class="line"><span class="lineno">  232</span>    <span class="keywordflow">while</span> (choix != 0);</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  235</span>}</div>
 <div class="ttc" id="amain_8c_html_a9491d6a1757a094d3aa2c1258707205d"><div class="ttname"><a href="#a9491d6a1757a094d3aa2c1258707205d">afficherMenu</a></div><div class="ttdeci">static void afficherMenu(void)</div><div class="ttdoc">Affiche le menu principal à l&#39;écran.</div><div class="ttdef"><b>Definition</b> <a href="main_8c_source.html#l00041">main.c:41</a></div></div>
-<div class="ttc" id="amediatheque_8c_html_a0fe71866ad3bad445197fe7e56613cb5"><div class="ttname"><a href="mediatheque_8c.html#a0fe71866ad3bad445197fe7e56613cb5">afficherStatistiques</a></div><div class="ttdeci">void afficherStatistiques(Livre tab[], int taille)</div><div class="ttdoc">Affiche les statistiques de la médiathèque : total, disponibles, empruntés, Top 3 des livres les plus...</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00774">mediatheque.c:774</a></div></div>
+<div class="ttc" id="amediatheque_8c_html_a0fe71866ad3bad445197fe7e56613cb5"><div class="ttname"><a href="mediatheque_8c.html#a0fe71866ad3bad445197fe7e56613cb5">afficherStatistiques</a></div><div class="ttdeci">void afficherStatistiques(Livre tab[], int taille)</div><div class="ttdoc">Affiche les statistiques de la médiathèque : total, disponibles, empruntés, Top 3 des livres les plus...</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00789">mediatheque.c:789</a></div></div>
 <div class="ttc" id="amediatheque_8c_html_a107d5522c51b0d64a7a121cf735e193a"><div class="ttname"><a href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a">lireEntier</a></div><div class="ttdeci">int lireEntier(void)</div><div class="ttdoc">Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00080">mediatheque.c:80</a></div></div>
 <div class="ttc" id="amediatheque_8c_html_a15715ae575b16aed43d9ad0751649172"><div class="ttname"><a href="mediatheque_8c.html#a15715ae575b16aed43d9ad0751649172">emprunterLivre</a></div><div class="ttdeci">int emprunterLivre(Livre tab[], int taille, int idCible)</div><div class="ttdoc">Marque un livre comme emprunté et note le nom de l&#39;emprunteur.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00492">mediatheque.c:492</a></div></div>
 <div class="ttc" id="amediatheque_8c_html_a1a211b627c8e1d1171d61afafdc0ad5b"><div class="ttname"><a href="mediatheque_8c.html#a1a211b627c8e1d1171d61afafdc0ad5b">supprimerElement</a></div><div class="ttdeci">void supprimerElement(Livre tab[], int *taille, int idCible)</div><div class="ttdoc">Supprime un livre identifié par son identifiant, après confirmation.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00557">mediatheque.c:557</a></div></div>
@@ -374,7 +379,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="amediatheque_8c_html_a8b37e72a483710e1d665d3aa0d78d3fe"><div class="ttname"><a href="mediatheque_8c.html#a8b37e72a483710e1d665d3aa0d78d3fe">lireLigne</a></div><div class="ttdeci">void lireLigne(char *dest, int taille)</div><div class="ttdoc">Lit une ligne de texte saisie par l&#39;utilisateur, sans le &#39; &#39; final.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00043">mediatheque.c:43</a></div></div>
 <div class="ttc" id="amediatheque_8c_html_aab22ba90ea580b8e73db98e3d7082cb7"><div class="ttname"><a href="mediatheque_8c.html#aab22ba90ea580b8e73db98e3d7082cb7">viderMediatheque</a></div><div class="ttdeci">void viderMediatheque(int *taille)</div><div class="ttdoc">Vide entièrement la médiathèque, après confirmation.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00596">mediatheque.c:596</a></div></div>
 <div class="ttc" id="amediatheque_8c_html_ac000fbe963e93aede1ae6d41706c527d"><div class="ttname"><a href="mediatheque_8c.html#ac000fbe963e93aede1ae6d41706c527d">rechercherParAuteur</a></div><div class="ttdeci">int rechercherParAuteur(Livre tab[], int taille, const char *auteurRecherche)</div><div class="ttdoc">Recherche un livre par son auteur (comparaison exacte).</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00347">mediatheque.c:347</a></div></div>
-<div class="ttc" id="amediatheque_8c_html_ac4e5e42e5065c5ba1702ff7fb0fc8da3"><div class="ttname"><a href="mediatheque_8c.html#ac4e5e42e5065c5ba1702ff7fb0fc8da3">trierCollection</a></div><div class="ttdeci">void trierCollection(Livre tab[], int taille)</div><div class="ttdoc">Trie la collection selon un critère au choix (titre, auteur, catégorie ou identifiant).</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00636">mediatheque.c:636</a></div></div>
+<div class="ttc" id="amediatheque_8c_html_ac4e5e42e5065c5ba1702ff7fb0fc8da3"><div class="ttname"><a href="mediatheque_8c.html#ac4e5e42e5065c5ba1702ff7fb0fc8da3">trierCollection</a></div><div class="ttdeci">void trierCollection(Livre tab[], int taille)</div><div class="ttdoc">Trie la collection selon un critère au choix (titre, auteur, catégorie ou identifiant).</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00641">mediatheque.c:641</a></div></div>
 <div class="ttc" id="amediatheque_8c_html_ad7e234724ddf2e0c18f9c5e5e5e1c75d"><div class="ttname"><a href="mediatheque_8c.html#ad7e234724ddf2e0c18f9c5e5e5e1c75d">ajouterElement</a></div><div class="ttdeci">int ajouterElement(Livre tab[], int *taille, int max)</div><div class="ttdoc">Demande les informations d&#39;un nouveau livre et l&#39;ajoute à la collection.</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00374">mediatheque.c:374</a></div></div>
 <div class="ttc" id="amediatheque_8c_html_af3d61ae7de3691d75459d1ba44d1e8d5"><div class="ttname"><a href="mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5">modifierElement</a></div><div class="ttdeci">void modifierElement(Livre tab[], int taille, int idCible)</div><div class="ttdoc">Modifie un livre identifié par son id (titre, auteur, catégorie ou tout).</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8c_source.html#l00428">mediatheque.c:428</a></div></div>
 <div class="ttc" id="amediatheque_8h_html_a5d3b541a4700a75af2b5228548d6b3b2"><div class="ttname"><a href="mediatheque_8h.html#a5d3b541a4700a75af2b5228548d6b3b2">TAILLE_TEXTE</a></div><div class="ttdeci">#define TAILLE_TEXTE</div><div class="ttdef"><b>Definition</b> <a href="mediatheque_8h_source.html#l00024">mediatheque.h:24</a></div></div>
@@ -385,7 +390,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png" border="0" usemap="#amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" loading="lazy" alt=""/></div>
 <map name="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
-<area shape="rect" title=" " alt="" coords="5,393,60,421"/>
+<area shape="rect" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,393,60,421"/>
 <area shape="rect" href="mediatheque_8c.html#a1dd3ea3e8938a3484aa2f7c3c7bb71ae" title="Affiche la collection de livres, avec un filtre au choix." alt="" coords="117,367,252,394"/>
 <area shape="poly" title=" " alt="" coords="58,400,103,393,100,397,62,405"/>
 <area shape="rect" href="mediatheque_8c.html#a107d5522c51b0d64a7a121cf735e193a" title="Lit un nombre entier saisi par l&#39;utilisateur, en redemandant tant que la saisie est invalide." alt="" coords="538,368,619,396"/>

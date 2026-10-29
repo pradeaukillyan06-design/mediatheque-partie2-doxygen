@@ -2,6 +2,6 @@
 <area shape="rect" id="Node000001" title="VRAI si le livre j doit passer après le livre j + 1 pour le critère choisi (1 titre,..." alt="" coords="269,5,375,33"/>
 <area shape="rect" id="Node000002" href="$mediatheque_8c.html#ac4e5e42e5065c5ba1702ff7fb0fc8da3" title="Trie la collection selon un critère au choix (titre, auteur, catégorie ou identifiant)." alt="" coords="108,5,221,33"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,19,222,22,222,17,256,19"/>
-<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,5,60,33"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
 </map>

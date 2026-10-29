@@ -8,7 +8,7 @@
 <area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="273,110,237,117,236,112,278,109"/>
 <area shape="rect" id="Node000006" href="$mediatheque_8c.html#af3d61ae7de3691d75459d1ba44d1e8d5" title="Modifie un livre identifié par son id (titre, auteur, catégorie ou tout)." alt="" coords="111,161,240,189"/>
 <area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="314,118,244,151,214,163,212,158,242,146,309,119"/>
-<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,84,60,112"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Point d&#39;entrée du programme : affiche le menu en boucle et appelle la fonction correspondant au choix..." alt="" coords="5,84,60,112"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,42,109,48,54,85,50,81,106,44,122,38"/>
 <area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="98,87,61,95,59,90,101,83"/>
 <area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="97,111,60,105,60,100,102,108"/>
